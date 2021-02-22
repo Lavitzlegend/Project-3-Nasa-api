@@ -25,9 +25,9 @@ class PictureOfTheDay extends Component {
             <div>
                 Picture
                 <img className="image" src={this.state.picture.url}/>
-                <h1 className="copyright"> {this.state.picture.copyright}</h1>
-                <h2 className="date">{this.state.picture.date}</h2>
                 <p className="explanation"> {this.state.picture.explanation}</p>
+                <h2 className="date">{this.state.picture.date}</h2>
+                <h1 className="copyright"> {this.state.picture.copyright}</h1>
             </div>
         )
     }
