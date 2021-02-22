@@ -22,12 +22,15 @@ class PictureOfTheDay extends Component {
 
     render() {
         return(
-            <div>
-                Picture
-                <img className="image" src={this.state.picture.url}/>
-                <p className="explanation"> {this.state.picture.explanation}</p>
-                <h2 className="date">{this.state.picture.date}</h2>
-                <h1 className="copyright"> {this.state.picture.copyright}</h1>
+            <div className="pod">
+                <h1 className="compHeader">Picture of the Day</h1>
+                <h2 className="compSubHeader">{this.state.picture.title}</h2>
+                <h2 className="compSubHeader">Date: {this.state.picture.date}</h2>
+                <img className="podPic" src={this.state.picture.url}/>
+                <section className="podExplanation">
+                    <p> {this.state.picture.explanation}</p>
+                    <h3>Copyright: {this.state.picture.copyright}</h3>
+                </section>
             </div>
         )
     }
