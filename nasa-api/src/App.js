@@ -8,6 +8,7 @@ import HomePage from './components/HomePage';
 import MarsRoverPhotos from "./components/MarsRoverPhotos";
 import InSightWeather from './components/InSightWeather';
 import ImageAndVideoLib from './components/ImageAndVideoLib';
+import NearEarthObjects from './components/NearEarthObjects';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
             <Link to="/rover"> Mars Rover Photos </Link>
             <Link to="/insightweather"> Mars Weather </Link>
             <Link to="/imageandvideolib"> Image And Video Library </Link>
+            <Link to="/neo"> Near Earth Objects </Link>
           </nav>
       
         
@@ -48,8 +50,12 @@ class App extends Component {
           <InSightWeather />
         )} />
 
-         <Route path="/imageandvideolib" render={() => (
+        <Route path="/imageandvideolib" render={() => (
           <ImageAndVideoLib />
+        )} />
+
+        <Route path="/neo" render={() => (
+          <NearEarthObjects />
         )} />
       </div>
     );

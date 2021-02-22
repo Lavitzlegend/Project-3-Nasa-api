@@ -44,7 +44,7 @@ class InSightWeather extends Component {
                 <h1 className="compHeader">Mars Weather</h1>
                 <div className="weather">
                     <div className="iframe">
-                        <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='680' height='527'  scrolling='no' frameborder='0'></iframe>
+                        <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='680' height='527'  scrolling='no' frameBorder='0'></iframe>
                     </div>
                     <div className="weatherInfo">
                         <h2 className="compSubHeader">Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
