@@ -40,18 +40,22 @@ class InSightWeather extends Component {
         const Day2Array = this.state.apiDataLoaded && renderWeatherKey2.Last_UTC.split('')   
         
         return(
-            <div>
-                <h2>Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
-                <h3>Earth Date: {this.state.apiDataLoaded && Day1Array.slice(0, 10)}</h3>
-                <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey1.PRE.av}</h4>
-                <h4>Minimum Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey1.PRE.mn}</h4>
-                <h4>Maximum Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey1.PRE.mx}</h4><br></br>
-                <h2>Sol: {this.state.apiDataLoaded && renderSolKey2}</h2>
-                <h3>Earth Date: {this.state.apiDataLoaded && Day2Array.slice(0, 10)}</h3>
-                <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
-                <h4>Minimum Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey2.PRE.mn}</h4>
-                <h4>Maximum Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey2.PRE.mx}</h4>
-                <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='800' height='530'  scrolling='no' frameborder='0'></iframe>
+            <div className="marsWeather">
+                <h1 className="compHeader">Mars Weather</h1>
+                <div className="weather">
+                    <div className="iframe">
+                        <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='680' height='527'  scrolling='no' frameborder='0'></iframe>
+                    </div>
+                    <div className="weatherInfo">
+                        <h2 className="compSubHeader">Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day1Array.slice(0, 10)}</h3>
+                        <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey1.PRE.av}</h4>
+                        <br></br>
+                        <h2 className="compSubHeader">Sol: {this.state.apiDataLoaded && renderSolKey2}</h2>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day2Array.slice(0, 10)}</h3>
+                        <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
+                    </div>
+                </div>
             </div>
         )
     }

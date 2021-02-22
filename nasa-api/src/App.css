@@ -30,7 +30,7 @@ a, a:link, a:visited {
   margin: 0;
 }
 
-.rover, .pod {
+.rover, .pod, .marsWeather {
   color: #ebebeb;
   background-color: #414141;
   padding-top: 0.5rem;
@@ -56,7 +56,6 @@ a, a:link, a:visited {
   max-height: 100px;
   object-fit: cover;
   margin: 0.5rem;
-
 }
 
 .marsRoverThumbnails {
@@ -78,6 +77,23 @@ a, a:link, a:visited {
   font-size: 18px;
   background-color: #8d8d8d;
   color: #333333
+}
+
+.weather {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.iframe {
+  margin: 1rem 3rem 1rem 1rem;
+  border: 3px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.weatherInfo {
+  text-align: left;
+  margin-top: 10%
 }
 
 .App {

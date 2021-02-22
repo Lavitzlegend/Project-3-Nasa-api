@@ -43,7 +43,7 @@ class MarsRoverPhotos extends Component {
                 <div>
                     {this.state.singlePic ? 
                     <div className="marsRoverPic">
-                        <h2 className="compSubHeader">Date: {this.state.singlePic.earth_date}</h2>
+                        <h2 className="compSubHeader">Earth Date: {this.state.singlePic.earth_date}</h2>
                         <h3>Camera: {this.state.singlePic.camera.full_name}</h3>
                         <img src={this.state.singlePic.img_src} alt="Mars Rover Photo" className="roverPic"/>
                     </div>
