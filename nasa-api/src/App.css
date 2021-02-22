@@ -34,7 +34,7 @@ a, a:link, a:visited {
   margin: 0;
 }
 
-.rover, .pod, .marsWeather {
+.rover, .pod, .marsWeather, .section1 {
   color: #ebebeb;
   background-color: #414141;
   padding-top: 0.5rem;

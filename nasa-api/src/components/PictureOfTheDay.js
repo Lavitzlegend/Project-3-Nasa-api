@@ -14,7 +14,7 @@ class PictureOfTheDay extends Component {
 
     componentDidMount = async () => {
         const pictureData = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${nasaAPIKey}`)
-        console.log(pictureData.data);
+        //console.log(pictureData.data);
           this.setState({
           picture: pictureData.data
         })
