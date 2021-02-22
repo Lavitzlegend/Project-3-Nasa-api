@@ -18,6 +18,10 @@ a, a:link, a:visited {
   color: #333333
 }
 
+.logo {
+  width: 150px;
+}
+
 .compHeader {
   margin-bottom: 0;
 }
