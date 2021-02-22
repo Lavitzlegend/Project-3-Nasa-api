@@ -32,6 +32,7 @@ class NearEarthObjects extends Component {
                         <p><strong>Object {index + 1}: {object.name}</strong></p>
                         <p>Average Diameter: {(object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2} ft</p>
                         <p>Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
+                        <a href={object.nasa_jpl_url} >More Info</a>
                     </div>
                 )) : "Loading..."}</div>
 
@@ -41,6 +42,7 @@ class NearEarthObjects extends Component {
                         <p><strong>Object {index + 1}: {object.name}</strong></p>
                         <p>Average Diameter: {(object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2} ft</p>
                         <p>Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
+                        <a href={object.nasa_jpl_url} >More Info</a>
                     </div>
                 )) : "Loading..."}</div>
 
@@ -50,6 +52,7 @@ class NearEarthObjects extends Component {
                         <p><strong>Object {index + 1}: {object.name}</strong></p>
                         <p>Average Diameter: {(object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2} ft</p>
                         <p>Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
+                        <a href={object.nasa_jpl_url} >More Info</a>
                     </div>
                 )) : "Loading..."}</div>
             </div>
