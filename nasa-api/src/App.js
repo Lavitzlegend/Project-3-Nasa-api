@@ -5,6 +5,7 @@ import { Link, Route } from 'react-router-dom';
 
 import PictureOfTheDay from './components/PictureOfTheDay';
 import HomePage from './components/HomePage';
+import InSightWeather from './components/InSightWeather';
 
 
 class App extends Component {
