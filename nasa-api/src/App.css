@@ -100,6 +100,23 @@ a, a:link, a:visited {
   margin-top: 10%
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  border: 2px solid red;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.item {
+  border: 1px solid blue;
+  margin: 1rem;
+}
+
+.homePagePar {
+  text-align: justify;
+  text-indent: 1rem;
+}
 .App {
   text-align: center;
 }
