@@ -7,6 +7,7 @@ import PictureOfTheDay from './components/PictureOfTheDay';
 import HomePage from './components/HomePage';
 import MarsRoverPhotos from "./components/MarsRoverPhotos";
 import InSightWeather from './components/InSightWeather';
+import NearEarthObjects from './components/NearEarthObjects';
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,10 @@ class App extends Component {
 
         <Route path="/insightweather" render={() => (
           <InSightWeather />
+        )} />
+
+        <Route path="/neo" render={() => (
+          <NearEarthObjects />
         )} />
       </div>
     );
