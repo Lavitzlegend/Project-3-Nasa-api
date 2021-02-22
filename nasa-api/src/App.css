@@ -1,3 +1,34 @@
+body {
+  background-color: #ebebeb;
+  color: #333333
+}
+
+header {
+  border: 1px solid blue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #333333
+}
+
+.rover {
+  background-color: #414141;
+  color: #ebebeb;
+}
+
+.roverPic {
+  border: 3px solid #ebebeb;
+  border-radius: 5px;
+  max-width: 40%
+}
+
 .App {
   text-align: center;
 }

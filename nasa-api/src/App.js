@@ -17,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
+          <h1>Nasa App</h1>
           <nav>
             <Link to="/pictureoftheday"> Picture of the Day </Link>
             <Link to="/rover"> Mars Rover Photos </Link>

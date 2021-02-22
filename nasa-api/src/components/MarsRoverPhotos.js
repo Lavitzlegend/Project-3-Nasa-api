@@ -21,19 +21,19 @@ class MarsRoverPhotos extends Component {
       }
 
     render () {
-        console.log(this.state.roverPhotos)
+        //console.log(this.state.roverPhotos)
         return (
             
-            <div>
+            <div className="rover">
                 <h1>Mars Rover Photos</h1>
+                <h2>Rover: Curiosity</h2>
                 {this.state.dataLoaded ?
                 <div>
                     {this.state.roverPhotos.map(onePhoto => (
-                        <div>
-                            <p>Rover: {onePhoto.rover.name}</p>
+                        <div className="marsRoverPic">
+                            <img src={onePhoto.img_src} alt="Mars Rover Photo" className="roverPic"/>
                             <p>Camera: {onePhoto.camera.full_name}</p>
                             <p>Date: {onePhoto.earth_date}</p>
-                            <img src={onePhoto.img_src} alt="Mars Rover Photo" />
                             <p>Image ID: {onePhoto.id}</p>
                         </div>
                     ))}
