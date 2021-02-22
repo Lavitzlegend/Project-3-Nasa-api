@@ -19,14 +19,35 @@ a, a:link, a:visited {
 }
 
 .rover {
-  background-color: #414141;
   color: #ebebeb;
+  background-color: #414141;
 }
 
 .roverPic {
   border: 3px solid #ebebeb;
   border-radius: 5px;
-  max-width: 40%
+  max-width: 50%;
+}
+
+.thumbnail {
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.marsRoverThumbnails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #8d8d8d;
+}
+
+.marsRoverPic {
+  background-color: #414141;
 }
 
 .App {

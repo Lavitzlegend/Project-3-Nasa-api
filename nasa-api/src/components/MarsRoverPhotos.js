@@ -7,7 +7,8 @@ class MarsRoverPhotos extends Component {
 
         this.state = {
             roverPhotos: "",
-            dataLoaded: false
+            dataLoaded: false,
+            singlePic: ""
         }
     }
 
@@ -20,23 +21,40 @@ class MarsRoverPhotos extends Component {
         })
       }
 
+      handleClik = (e) => {
+          //console.log(e.target.id)
+          const foundPic = this.state.roverPhotos.find(onePic => {
+              return onePic.id == e.target.id
+          });
+          this.setState({
+              singlePic: foundPic
+          })
+          //console.log(foundPic)
+      }
+
     render () {
         //console.log(this.state.roverPhotos)
+        //console.log(this.state.singlePic)
         return (
-            
             <div className="rover">
                 <h1>Mars Rover Photos</h1>
                 <h2>Rover: Curiosity</h2>
                 {this.state.dataLoaded ?
                 <div>
-                    {this.state.roverPhotos.map(onePhoto => (
-                        <div className="marsRoverPic">
-                            <img src={onePhoto.img_src} alt="Mars Rover Photo" className="roverPic"/>
-                            <p>Camera: {onePhoto.camera.full_name}</p>
-                            <p>Date: {onePhoto.earth_date}</p>
-                            <p>Image ID: {onePhoto.id}</p>
-                        </div>
-                    ))}
+                    {this.state.singlePic ? 
+                    <div className="marsRoverPic">
+                        <img src={this.state.singlePic.img_src} alt="Mars Rover Photo" className="roverPic"/>
+                        <p>Camera: {this.state.singlePic.camera.full_name}</p>
+                        <p>Date: {this.state.singlePic.earth_date}</p>
+                    </div>
+                    : <p></p>}
+                    <div className="marsRoverThumbnails">
+                        {this.state.roverPhotos.map(onePhoto => (
+                            <div>
+                                <img src={onePhoto.img_src} alt="Mars Rover Photo" className="thumbnail" key={onePhoto.id} id={onePhoto.id}onClick={this.handleClik}/>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             : <p>... Loading ...</p>}
             </div>
