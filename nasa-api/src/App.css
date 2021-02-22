@@ -22,6 +22,10 @@ a, a:link, a:visited {
   font-weight: bold;
 }
 
+button {
+  float: right;
+}
+
 .logo {
   width: 150px;
 }
@@ -103,7 +107,6 @@ a, a:link, a:visited {
 .container {
   display: grid;
   grid-template-columns: 40vw 40vw;
-  border: 2px solid red;
   margin-left: 10vw;
   margin-right: 10vw;
 }
@@ -111,12 +114,28 @@ a, a:link, a:visited {
 .item {
   border: 1px solid blue;
   margin: 1rem;
+  position: relative;
 }
 
 .homePagePar {
   text-align: justify;
   text-indent: 1rem;
 }
+
+.marsCover {
+  width: 30vw;
+  height: 30vh;
+  object-fit: cover;
+  margin-top: auto;
+}
+
+.absolute {
+  position: absolute;
+  left: 2em;
+  color: #ebebeb;
+  text-shadow: 1px 1px #4e4e4e
+}
+
 .App {
   text-align: center;
 }
