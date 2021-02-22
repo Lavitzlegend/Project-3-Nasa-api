@@ -15,7 +15,7 @@ class NearEarthObjects extends Component {
 
     componentDidMount = async () => {
         const nearEarthObjects = await axios.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-19&end_date=2021-02-21&api_key=${apiKey}`)
-        console.log(nearEarthObjects.data.near_earth_objects);
+        // console.log(nearEarthObjects.data.near_earth_objects);
        
         this.setState({
             objects: nearEarthObjects.data.near_earth_objects,
