@@ -37,15 +37,15 @@ class MarsRoverPhotos extends Component {
         //console.log(this.state.singlePic)
         return (
             <div className="rover">
-                <h1>Mars Rover Photos</h1>
-                <h2>Rover: Curiosity</h2>
+                <h1 className="compHeader">Mars Rover Photos</h1>
+                <h2 className="compSubHeader">Rover: Curiosity</h2>
                 {this.state.dataLoaded ?
                 <div>
                     {this.state.singlePic ? 
                     <div className="marsRoverPic">
+                        <h2 className="compSubHeader">Date: {this.state.singlePic.earth_date}</h2>
+                        <h3>Camera: {this.state.singlePic.camera.full_name}</h3>
                         <img src={this.state.singlePic.img_src} alt="Mars Rover Photo" className="roverPic"/>
-                        <p>Camera: {this.state.singlePic.camera.full_name}</p>
-                        <p>Date: {this.state.singlePic.earth_date}</p>
                     </div>
                     : <p></p>}
                     <div className="marsRoverThumbnails">

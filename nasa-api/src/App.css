@@ -18,30 +18,40 @@ a, a:link, a:visited {
   color: #333333
 }
 
+.compHeader {
+  margin-bottom: 0;
+}
+
+.compSubHeader {
+  margin: 0;
+}
+
 .rover {
   color: #ebebeb;
   background-color: #414141;
+  padding-top: 0.5rem;
 }
 
 .roverPic {
   border: 3px solid #ebebeb;
   border-radius: 5px;
   max-width: 50%;
+  margin: 1rem 0 2rem 0;
 }
 
 .thumbnail {
   border: 1px solid #ebebeb;
-  border-radius: 5px;
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   object-fit: cover;
+  margin: 0.5rem;
+
 }
 
 .marsRoverThumbnails {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  justify-content: space-evenly;
   padding: 1rem;
   background-color: #8d8d8d;
 }
