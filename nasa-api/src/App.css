@@ -18,6 +18,10 @@ a, a:link, a:visited {
   color: #333333
 }
 
+.logo {
+  width: 150px;
+}
+
 .compHeader {
   margin-bottom: 0;
 }
@@ -26,7 +30,7 @@ a, a:link, a:visited {
   margin: 0;
 }
 
-.rover {
+.rover, .pod {
   color: #ebebeb;
   background-color: #414141;
   padding-top: 0.5rem;
@@ -36,6 +40,13 @@ a, a:link, a:visited {
   border: 3px solid #ebebeb;
   border-radius: 5px;
   max-width: 50%;
+  margin: 1rem 0 1rem 0;
+}
+
+.podPic {
+  border: 3px solid #ebebeb;
+  border-radius: 5px;
+  max-width: 70%;
   margin: 1rem 0 2rem 0;
 }
 
@@ -58,6 +69,15 @@ a, a:link, a:visited {
 
 .marsRoverPic {
   background-color: #414141;
+}
+
+.podExplanation {
+  text-align: justify;
+  text-indent: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 18px;
+  background-color: #8d8d8d;
+  color: #333333
 }
 
 .App {

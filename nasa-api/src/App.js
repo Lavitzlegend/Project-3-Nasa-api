@@ -17,11 +17,16 @@ class App extends Component {
     return (
       <div className="App">
         <header>
+          <section>
           <h1>Nasa App</h1>
+          <a href="https://www.nasa.gov" target="_blank">
+            <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="Nasa Logo" className="logo"/>
+          </a>
+          </section>
           <nav>
+            <Link to="/"> Home Page </Link>
             <Link to="/pictureoftheday"> Picture of the Day </Link>
             <Link to="/rover"> Mars Rover Photos </Link>
-            <Link to="/"> Home Page </Link>
           </nav>
         </header>
         
