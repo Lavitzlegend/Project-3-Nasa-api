@@ -1,3 +1,65 @@
+body {
+  background-color: #ebebeb;
+  color: #333333
+}
+
+header {
+  border: 1px solid blue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #333333
+}
+
+.compHeader {
+  margin-bottom: 0;
+}
+
+.compSubHeader {
+  margin: 0;
+}
+
+.rover {
+  color: #ebebeb;
+  background-color: #414141;
+  padding-top: 0.5rem;
+}
+
+.roverPic {
+  border: 3px solid #ebebeb;
+  border-radius: 5px;
+  max-width: 50%;
+  margin: 1rem 0 2rem 0;
+}
+
+.thumbnail {
+  border: 1px solid #ebebeb;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  margin: 0.5rem;
+
+}
+
+.marsRoverThumbnails {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  justify-content: space-evenly;
+  padding: 1rem;
+  background-color: #8d8d8d;
+}
+
+.marsRoverPic {
+  background-color: #414141;
+}
+
 .App {
   text-align: center;
 }

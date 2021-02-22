@@ -5,6 +5,7 @@ import { Link, Route } from 'react-router-dom';
 
 import PictureOfTheDay from './components/PictureOfTheDay';
 import HomePage from './components/HomePage';
+import MarsRoverPhotos from "./components/MarsRoverPhotos"
 
 
 class App extends Component {
@@ -16,8 +17,10 @@ class App extends Component {
     return (
       <div className="App">
         <header>
+          <h1>Nasa App</h1>
           <nav>
             <Link to="/pictureoftheday"> Picture of the Day </Link>
+            <Link to="/rover"> Mars Rover Photos </Link>
             <Link to="/"> Home Page </Link>
           </nav>
         </header>
@@ -28,6 +31,10 @@ class App extends Component {
 
         <Route path="/pictureoftheday" render={() => (
           <PictureOfTheDay />
+        )} />
+
+        <Route path="/rover" render={() => (
+          <MarsRoverPhotos />
         )} />
       </div>
     );
