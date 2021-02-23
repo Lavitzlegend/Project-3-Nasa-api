@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
 body {
   background-color: #ebebeb;
   color: #333333
 }
 
-header {
+footer {
   display: flex;
-  justify-content: space-between;
-  padding-left: 1.5rem;
+  justify-content: space-evenly;
+  background-color: #8d8d8d;
+  text-align: left;
+}
+
+header {
+  background-color: #333333;
+  color: #ebebeb;
 }
 
 nav {
@@ -26,6 +34,12 @@ h4 {
   margin: 0.5rem 0 0 0;
 }
 
+ul {
+  text-align: left;
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .button {
   background-color: #333333;
   border: 2px solid #ebebeb;
@@ -35,6 +49,22 @@ h4 {
 
 .logo {
   width: 150px;
+}
+
+.pageTitle {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 64px;
+  text-shadow: -4px -4px 2px #0fb2f2;
+  letter-spacing: 4px;
+  margin: 0;
+  padding: 1rem;
+}
+
+.pageSubTitle {
+  font-size: 28px;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 1px;
 }
 
 .compHeader {
@@ -52,7 +82,7 @@ h4 {
 }
 
 .section1 {
-  height: 30vh;
+  padding: 2rem;
 }
 
 .neo {
@@ -79,6 +109,7 @@ h4 {
   max-height: 100px;
   object-fit: cover;
   margin: 0.5rem;
+  align-self: center;
 }
 
 .marsRoverThumbnails {
@@ -124,8 +155,6 @@ h4 {
   grid-template-columns: 40vw 40vw;
   margin-left: 10vw;
   margin-right: 10vw;
-  position: absolute;
-  top: 32vh;
 }
 
 .container2 {
@@ -136,7 +165,6 @@ h4 {
 }
 
 .item, .itemPar {
-  border: 1px solid blue;
   margin: 1rem;
   position: relative;
   place-self: center;
@@ -144,6 +172,7 @@ h4 {
 
 .itemPar {
   min-width: 352px;
+  max-width: 470px;
 }
 
 .item2 {
@@ -153,10 +182,7 @@ h4 {
 .lightContent, .darkContent {
   text-align: justify;
   text-indent: 1rem;
-}
-
-.lightContent {
-  color: #ebebeb
+  margin-top: 1.5rem;
 }
 
 .marsCover {
@@ -184,6 +210,10 @@ h4 {
 
 .neoPtop {
   margin: 0;
+}
+
+.footerDiv {
+  text-align: center;
 }
 
 .App {

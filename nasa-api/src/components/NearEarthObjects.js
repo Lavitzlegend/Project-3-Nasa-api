@@ -37,7 +37,7 @@ class NearEarthObjects extends Component {
                                 <h4>Object {index + 1}: {object.name}</h4>
                                 <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
                                 <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
-                                <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                                <a className="button" href={object.nasa_jpl_url} target="_blank">More Info</a>
                             </div>
                         )) : "Loading..."}</div>
                     </div>
@@ -49,7 +49,7 @@ class NearEarthObjects extends Component {
                             <h4>Object {index + 1}: {object.name}</h4>
                             <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
                             <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
-                            <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                            <a className="button" href={object.nasa_jpl_url} target="_blank" >More Info</a>
                         </div>
                     )) : "Also Loading..."}</div>
                     </div>
@@ -61,7 +61,7 @@ class NearEarthObjects extends Component {
                             <h4>Object {index + 1}: {object.name}</h4>
                             <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
                             <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
-                            <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                            <a className="button" href={object.nasa_jpl_url} target="_blank">More Info</a>
                         </div>
                     )) : "So Much Loading..."}</div>
                     </div>
