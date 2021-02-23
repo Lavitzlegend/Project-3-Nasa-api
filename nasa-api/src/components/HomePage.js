@@ -4,8 +4,8 @@ const HomePage = (props) => {
     return(
         <div>
             <section className="section1">
-                <h1 className="pageSubTitle">Mildly Interesting and Slightly Concerning</h1>
-                <h1 className="pageSubTitle">Space App</h1>
+                <h1 className="pageSubTitle">Welcome to the</h1>
+                <h1 className="pageSubTitle">Mildly Interesting and Slightly Concerning Space App</h1>
             </section>
             <div className="container">
                 <div className="item">
@@ -28,10 +28,21 @@ const HomePage = (props) => {
                 </div>
             </div>
             <section className="section2"></section>
-            <footer>This is a footer
-                <a href="https://www.nasa.gov" target="_blank">
-                    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="Nasa Logo" className="logo"/>
-                </a>
+            <footer>
+                <div>
+                    <h4>The Team:</h4>
+                    <ul>
+                        <li>Ana Cecilia Maldonado</li>
+                        <li>Jordan Dyar</li>
+                        <li>Thomas Gores</li>
+                    </ul>
+                </div>
+                <div className="footerDiv">
+                    <h4>To learn more:</h4>
+                    <a href="https://www.nasa.gov" target="_blank">
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="Nasa Logo" className="logo"/>
+                    </a>
+                </div>
             </footer>
         </div>
     )
