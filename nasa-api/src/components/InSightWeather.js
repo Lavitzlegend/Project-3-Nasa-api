@@ -11,6 +11,7 @@ class InSightWeather extends Component {
             weatherInfo: [],
             solKeys: [],
             apiDataLoaded: false,
+            formatDate: '',
         }
     }
 
@@ -28,6 +29,17 @@ class InSightWeather extends Component {
         })
     }
 
+    changeFormatDate = (xDate) => {
+        console.log(xDate)
+        const today= new Date(xDate)
+        const month=parseInt(today.getMonth());
+        const day=parseInt(today.getDate()+1);
+        const year= parseInt(today.getFullYear());
+       const date= new Date(year, month, day)
+       console.log(date.toDateString())
+       return (date.toDateString())
+    }
+
     render() {
         const renderWeatherInfo = this.state.weatherInfo;
 
@@ -36,8 +48,14 @@ class InSightWeather extends Component {
         
         const renderWeatherKey1 = renderWeatherInfo[`${renderSolKey1}`]
         const Day1Array = this.state.apiDataLoaded && renderWeatherKey1.Last_UTC.split('')
+        const Day1Nums = this.state.apiDataLoaded && Day1Array.map(num => (parseInt(num)))
+        const Day1NumsArray = this.state.apiDataLoaded && this.changeFormatDate(`${Day1Nums.slice(0, 1)}` + `${Day1Nums.slice(1, 2)}` + `${Day1Nums.slice(2, 3)}` + `${Day1Nums.slice(3, 4)}-` + `${Day1Nums.slice(5, 6)}` + `${Day1Nums.slice(6, 7)}-` + `${Day1Nums.slice(8, 9)}` + `${Day1Nums.slice(9, 10)}`)
+
         const renderWeatherKey2 = renderWeatherInfo[`${renderSolKey2}`]
         const Day2Array = this.state.apiDataLoaded && renderWeatherKey2.Last_UTC.split('')   
+        const Day2Nums = this.state.apiDataLoaded && Day2Array.map(num => (parseInt(num)))
+        const Day2NumsArray = this.state.apiDataLoaded && this.changeFormatDate(`${Day2Nums.slice(0, 1)}` + `${Day2Nums.slice(1, 2)}` + `${Day2Nums.slice(2, 3)}` + `${Day2Nums.slice(3, 4)}-` + `${Day2Nums.slice(5, 6)}` + `${Day2Nums.slice(6, 7)}-` + `${Day2Nums.slice(8, 9)}` + `${Day2Nums.slice(9, 10)}`)
+        
         return(
             <div className="marsWeather">
                 <h1 className="compHeader">Mars Weather</h1>
@@ -48,11 +66,11 @@ class InSightWeather extends Component {
                     <div className="weatherInfo">
                         <h2>Insight Rover:</h2><br></br>
                         <h2 className="compSubHeader">Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
-                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day1Array.slice(0, 10)}</h3>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day1NumsArray}</h3>
                         <h4>Average Pressure (Pa): {this.state.apiDataLoaded && renderWeatherKey1.PRE.av}</h4>
                         <br></br>
                         <h2 className="compSubHeader">Sol: {this.state.apiDataLoaded && renderSolKey2}</h2>
-                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day2Array.slice(0, 10)}</h3>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day2NumsArray}</h3>
                         <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
                     </div>
                 </div>

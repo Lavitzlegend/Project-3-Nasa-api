@@ -56,7 +56,7 @@ class App extends Component {
         )} />
 
         <Route path="/insightweather" render={() => (
-          <InSightWeather formatDate={this.changeFormatDate}/>
+          <InSightWeather />
         )} />
 
         <Route path="/imageandvideolib" render={() => (
