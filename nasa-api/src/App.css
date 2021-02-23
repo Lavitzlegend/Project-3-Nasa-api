@@ -22,8 +22,15 @@ a, a:link, a:visited {
   font-weight: bold;
 }
 
-button {
-  float: right;
+h4 {
+  margin: 0.5rem 0 0 0;
+}
+
+.button {
+  background-color: #333333;
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+  padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
 .logo {
@@ -38,10 +45,18 @@ button {
   margin: 0;
 }
 
-.rover, .pod, .marsWeather, .section1 {
+.rover, .pod, .marsWeather, .neo, .section1 {
   color: #ebebeb;
   background-color: #414141;
   padding-top: 0.5rem;
+}
+
+.section1 {
+  height: 30vh;
+}
+
+.neo {
+  padding-bottom: 2rem;
 }
 
 .roverPic {
@@ -109,17 +124,39 @@ button {
   grid-template-columns: 40vw 40vw;
   margin-left: 10vw;
   margin-right: 10vw;
+  position: absolute;
+  top: 32vh;
 }
 
-.item {
+.container2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: #8d8d8d;
+  padding-top: 1rem;
+}
+
+.item, .itemPar {
   border: 1px solid blue;
   margin: 1rem;
   position: relative;
+  place-self: center;
 }
 
-.homePagePar {
+.itemPar {
+  min-width: 352px;
+}
+
+.item2 {
+  margin: 1rem;
+}
+
+.lightContent, .darkContent {
   text-align: justify;
   text-indent: 1rem;
+}
+
+.lightContent {
+  color: #ebebeb
 }
 
 .marsCover {
@@ -134,6 +171,19 @@ button {
   left: 2em;
   color: #ebebeb;
   text-shadow: 1px 1px #4e4e4e
+}
+
+.neoBlock {
+  border-bottom: 1px solid #414141;
+  padding-bottom: 1rem;
+}
+
+.neoPbottom {
+  margin: 0 0 1rem 0;
+}
+
+.neoPtop {
+  margin: 0;
 }
 
 .App {
