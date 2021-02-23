@@ -216,16 +216,6 @@ ul {
   text-align: center;
 }
 
-.neoGreen {
-  margin: 0 0 1rem 0;
-  color: rgb(52, 104, 52);
-}
-
-.neoRed {
-  margin: 0 0 1rem 0;
-  background-color: rgb(202, 46, 46);
-}
-
 .App {
   text-align: center;
 }
@@ -264,3 +254,23 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+
+.temp { 
+  width: 40%;
+  border: 1px red solid;
+  margin: 0 auto;
+  position: absolute
+}
+
+.modal {
+  text-align: left;
+  background-color: #333333
+}
+
+.modalBody li {
+  margin-left: 2rem;
+}
+
+.modalBody ul {
+  padding: 1rem 0 1rem 0;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import Modal from "./Modal"
 
 class MarsRoverPhotos extends Component {
     constructor(props) {
@@ -8,7 +9,8 @@ class MarsRoverPhotos extends Component {
         this.state = {
             roverPhotos: "",
             dataLoaded: false,
-            singlePic: ""
+            singlePic: "",
+            show: false
         }
     }
     
@@ -32,6 +34,14 @@ class MarsRoverPhotos extends Component {
           //console.log(foundPic)
       }
 
+      showModal = () => {
+        const showModalSt= this.state.show;
+        this.setState({
+            show: !this.state.show
+        })
+        return showModalSt
+      }
+
     render () {
         //console.log(this.props)
         //console.log(this.state.roverPhotos)
@@ -40,6 +50,14 @@ class MarsRoverPhotos extends Component {
             <div className="rover">
                 <h1 className="compHeader">Mars Rover Photos</h1>
                 <h2 className="compSubHeader">Rover: Curiosity</h2>
+
+                <div className="temp">
+                    <button onClick={() => this.showModal()}> ShowModal </button>
+                    {this.state.show ?
+                    <Modal modalState={this.state.show}/>
+                    : <p></p>}
+                </div>
+                
                 {this.state.dataLoaded ?
                 <div>
                     {this.state.singlePic ? 
@@ -58,6 +76,7 @@ class MarsRoverPhotos extends Component {
                     </div>
                 </div>
             : <p>... Loading ...</p>}
+                
             </div>
         )
     }
