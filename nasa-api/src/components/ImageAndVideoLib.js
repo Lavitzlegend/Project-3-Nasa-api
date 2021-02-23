@@ -9,16 +9,20 @@ class ImageAndVideoLib extends Component {
 
         this.state = {
             imageVideo: [],
+            imageVideoMeta: [],
             apiDataLoaded: false
         }
     }
 
     componentDidMount = async () => {
         const imageVideoData = await axios.get(`https://images-api.nasa.gov/search?q=voyager&media_type=image&year_start=1980&year_end=1981`)
+        const imageVideoDataMeta = await axios.get(`https://images-api.nasa.gov/asset/172_ISS-Slosh?api_key=${nasaAPIKey}`)
         console.log("test");
         console.log(imageVideoData);
+        console.log(imageVideoDataMeta);
           this.setState({
             imageVideo: imageVideoData.data.collection.items,
+            imageVideo: imageVideoDataMeta.data.collection.items,
             apiDataLoaded: true
         })
       }
