@@ -136,7 +136,6 @@ h4 {
 }
 
 .item, .itemPar {
-  border: 1px solid blue;
   margin: 1rem;
   position: relative;
   place-self: center;
@@ -144,6 +143,7 @@ h4 {
 
 .itemPar {
   min-width: 352px;
+  max-width: 470px;
 }
 
 .item2 {
@@ -153,6 +153,7 @@ h4 {
 .lightContent, .darkContent {
   text-align: justify;
   text-indent: 1rem;
+  margin-top: 1.5rem;
 }
 
 .lightContent {
