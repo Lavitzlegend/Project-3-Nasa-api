@@ -51,7 +51,7 @@ class NearEarthObjects extends Component {
                             <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
                             <a className="button" href={object.nasa_jpl_url} >More Info</a>
                         </div>
-                    )) : "Loading..."}</div>
+                    )) : "Also Loading..."}</div>
                     </div>
 
                     <div className="item2">
@@ -63,7 +63,7 @@ class NearEarthObjects extends Component {
                             <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
                             <a className="button" href={object.nasa_jpl_url} >More Info</a>
                         </div>
-                    )) : "Loading..."}</div>
+                    )) : "So Much Loading..."}</div>
                     </div>
                 </div>
             </div>
