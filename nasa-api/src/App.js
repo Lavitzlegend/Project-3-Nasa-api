@@ -15,6 +15,17 @@ class App extends Component {
     super(props);
   }
 
+  changeFormatDate = (xDate) => {
+    console.log(xDate)
+    const today= new Date(xDate)
+    const month=parseInt(today.getMonth());
+    const day=parseInt(today.getDate()+1);
+    const year= parseInt(today.getFullYear());
+   const date= new Date(year, month, day)
+   console.log(date.toDateString())
+   return (date.toDateString())
+}
+
   render() {
     return (
       <div className="App">
@@ -37,11 +48,11 @@ class App extends Component {
         )} />
 
         <Route path="/pictureoftheday" render={() => (
-          <PictureOfTheDay />
+          <PictureOfTheDay formatDate={this.changeFormatDate}/>
         )} />
 
         <Route path="/rover" render={() => (
-          <MarsRoverPhotos />
+          <MarsRoverPhotos formatDate={this.changeFormatDate}/>
         )} />
 
         <Route path="/insightweather" render={() => (
