@@ -47,6 +47,7 @@ class InSightWeather extends Component {
                         <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='680' height='527'  scrolling='no' frameBorder='0'></iframe>
                     </div>
                     <div className="weatherInfo">
+                        <h2>Insight Rover:</h2><br></br>
                         <h2 className="compSubHeader">Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
                         <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day1Array.slice(0, 10)}</h3>
                         <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey1.PRE.av}</h4>
