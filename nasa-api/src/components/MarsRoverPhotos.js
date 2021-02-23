@@ -32,6 +32,21 @@ class MarsRoverPhotos extends Component {
           //console.log(foundPic)
       }
 
+      formatDate = (newDate) => {
+          console.log(newDate)
+          const today= new Date(newDate)
+          //console.log(today)
+          const month=parseInt(today.getMonth());
+          const day=parseInt(today.getDate()+1);
+          const year= parseInt(today.getFullYear());
+            //console.log(month);
+            //console.log(day);
+            //console.log(year)
+         const date= new Date(year, month, day)
+         console.log(date.toDateString())
+         return (date.toDateString())
+      }
+
     render () {
         //console.log(this.state.roverPhotos)
         //console.log(this.state.singlePic)
@@ -43,7 +58,7 @@ class MarsRoverPhotos extends Component {
                 <div>
                     {this.state.singlePic ? 
                     <div className="marsRoverPic">
-                        <h2 className="compSubHeader">Earth Date: {this.state.singlePic.earth_date}</h2>
+                        <h2 className="compSubHeader">Earth Date: {this.formatDate(this.state.singlePic.earth_date)}</h2>
                         <h3>Camera: {this.state.singlePic.camera.full_name}</h3>
                         <img src={this.state.singlePic.img_src} alt="Mars Rover Photo" className="roverPic"/>
                     </div>
