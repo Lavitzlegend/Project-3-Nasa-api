@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import styled, { keyframes } from "styled-components";
+import {slideInDown} from "react-animations"
 
 class Modal extends Component {
     constructor(props) {
@@ -8,9 +9,18 @@ class Modal extends Component {
     }
 
     render () {
-        console.log(this.props.modalState)
+        const slideAnimation = keyframes`${slideInDown}`;
+
+        const MyModal = styled.div`
+        animation: 1s ${slideAnimation};
+        &:active {
+            background-color: yellow;
+        }
+        `
+
+        //console.log(this.props.modalState)
         return (
-            <div className={`modal ${this.props.modalState ? `show`: ""}`}>
+            <MyModal className={`modal ${this.props.modalState ? `show`: ""}`}>
                 <div className="modalContent">
                     <div className="modalHeader">
                         <div className="modalTitle">
@@ -30,7 +40,7 @@ class Modal extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </MyModal>
         )
     }
 }
