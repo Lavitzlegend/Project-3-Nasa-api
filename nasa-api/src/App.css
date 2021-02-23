@@ -216,26 +216,6 @@ ul {
   text-align: center;
 }
 
-.temp { 
-  width: 40%;
-  border: 1px red solid;
-  margin: 0 auto;
-  position: absolute
-}
-
-.modal {
-  text-align: left;
-  background-color: #333333
-}
-
-.modalBody li {
-  margin-left: 2rem;
-}
-
-.modalBody ul {
-  padding: 1rem 0 1rem 0;
-}
-
 .App {
   text-align: center;
 }
@@ -274,3 +254,23 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+
+.temp { 
+  width: 40%;
+  border: 1px red solid;
+  margin: 0 auto;
+  position: absolute
+}
+
+.modal {
+  text-align: left;
+  background-color: #333333
+}
+
+.modalBody li {
+  margin-left: 2rem;
+}
+
+.modalBody ul {
+  padding: 1rem 0 1rem 0;
