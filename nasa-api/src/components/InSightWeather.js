@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Modal from "./Modal"
 
 const apiKey = "wfN54hzmlrCWgefGrpTSJJX3Vkrb10lzxziTmzCR"
 
@@ -12,17 +13,17 @@ class InSightWeather extends Component {
             solKeys: [],
             apiDataLoaded: false,
             formatDate: '',
+            show: false
         }
     }
 
     componentDidMount = async () => {
         const inSight = await axios.get(`https://api.nasa.gov/insight_weather/?api_key=${apiKey}&feedtype=json&ver=1.0`)
-        console.log(inSight);
+        //console.log(inSight);
         const solKeys = inSight.data.sol_keys.map(key => (this.state.solKeys.unshift(key)));
-        console.log(solKeys)
-        console.log(this.state.solKeys)
-       
-        
+        //console.log(solKeys)
+        //console.log(this.state.solKeys)
+    
         this.setState({
             weatherInfo: inSight.data,
             apiDataLoaded: true,
@@ -30,15 +31,23 @@ class InSightWeather extends Component {
     }
 
     changeFormatDate = (xDate) => {
-        console.log(xDate)
+        //console.log(xDate)
         const today= new Date(xDate)
         const month=parseInt(today.getMonth());
         const day=parseInt(today.getDate()+1);
         const year= parseInt(today.getFullYear());
-       const date= new Date(year, month, day)
-       console.log(date.toDateString())
-       return (date.toDateString())
+        const date= new Date(year, month, day)
+        //console.log(date.toDateString())
+        return (date.toDateString())
     }
+
+    showModal = () => {
+        const showModalSt= this.state.show;
+        this.setState({
+            show: !this.state.show
+        })
+        return showModalSt
+      }
 
     render() {
         const renderWeatherInfo = this.state.weatherInfo;
@@ -66,13 +75,19 @@ class InSightWeather extends Component {
                     <div className="weatherInfo">
                         <h2>Insight Rover:</h2><br></br>
                         <h2 className="compSubHeader">Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
-                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day1NumsArray}</h3>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && this.props.formatDate(Day1NumsArray)}</h3>
                         <h4>Average Pressure (Pa): {this.state.apiDataLoaded && renderWeatherKey1.PRE.av}</h4>
                         <br></br>
                         <h2 className="compSubHeader">Sol: {this.state.apiDataLoaded && renderSolKey2}</h2>
-                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day2NumsArray}</h3>
-                        <h4>Average Pressure (Pa) - {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && this.props.formatDate(Day2NumsArray)}</h3>
+                        <h4>Average Pressure (Pa): {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
                     </div>
+                </div>
+                <div className="temp">
+                    <button onClick={() => this.showModal()}> ShowModal </button>
+                    {this.state.show ?
+                    <Modal modalState={this.state.show}/>
+                    : <p></p>}
                 </div>
             </div>
         )
