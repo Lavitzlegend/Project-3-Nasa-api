@@ -5,18 +5,18 @@ class Modal extends Component {
         super(props)
 
     }
-    
 
     render () {
+        console.log(this.props.modalState)
         return (
-            <div className="modal">
-                <div className="modalContent" onClick={e => e.stopPropagation()}>
+            <div className={`modal ${this.props.modalState ? `show`: ""}`}>
+                <div className="modalContent">
                     <div className="modalHeader">
                         <div className="modalTitle">
-                            <h1>Compare Mars atmospheric pressure with Earth's</h1>
+                            <h2>Comparison between Mars and Earts's atmospheric pressure</h2>
                         </div>
                         <div className="modalBody">
-                            <h3>The atmosphere of Mars is much thinner than Earth's. The average surface pressure is less than 1% of the Earth's value.</h3>
+                            <p>The atmosphere of Mars is much thinner than Earth's. The average surface pressure is less than 1% of the Earth's value.</p>
                             <ul>
                                 <li>At sea level: 101,325Pa</li>
                                 <li>New York City: 101,600Pa</li>

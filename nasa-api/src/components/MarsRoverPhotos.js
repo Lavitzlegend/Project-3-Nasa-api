@@ -50,6 +50,14 @@ class MarsRoverPhotos extends Component {
             <div className="rover">
                 <h1 className="compHeader">Mars Rover Photos</h1>
                 <h2 className="compSubHeader">Rover: Curiosity</h2>
+
+                <div className="temp">
+                    <button onClick={() => this.showModal()}> ShowModal </button>
+                    {this.state.show ?
+                    <Modal modalState={this.state.show}/>
+                    : <p></p>}
+                </div>
+                
                 {this.state.dataLoaded ?
                 <div>
                     {this.state.singlePic ? 
@@ -68,12 +76,7 @@ class MarsRoverPhotos extends Component {
                     </div>
                 </div>
             : <p>... Loading ...</p>}
-                <div className="temp">
-                    <button onClick={() => this.showModal()}> ShowModal </button>
-                    {this.state.show ?
-                    <Modal showModal={this.showModal}/>
-                    : <p></p>}
-                </div>
+                
             </div>
         )
     }
