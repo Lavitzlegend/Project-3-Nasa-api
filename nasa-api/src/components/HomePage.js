@@ -24,8 +24,10 @@ const HomePage = (props) => {
                 </div>
                 <div className="item">
                     <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nhq202102180017.jpg" alt="Perseverance Landing" className="marsCover"/>
-                    </div>
+                </div>
             </div>
+            <section className="section2"></section>
+            <section className="section3"></section>
         </div>
     )
 }

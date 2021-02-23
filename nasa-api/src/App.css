@@ -55,6 +55,15 @@ h4 {
   height: 30vh;
 }
 
+.section2 {
+  height: 23vh;
+}
+
+.section3 {
+  background-color: #8d8d8d;
+  height: 40vh;
+}
+
 .neo {
   padding-bottom: 2rem;
 }
