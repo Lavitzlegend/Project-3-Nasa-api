@@ -38,7 +38,16 @@ class NearEarthObjects extends Component {
                                     <div className="neoBlock" key={`Neo ` + index}>
                                         <h4>Object {index + 1}: {object.name}</h4>
                                         <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
-                                        <p className="neoPbottom">Run For Our Lives? = <p className="neoGreen">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
+                                        <p className="neoPbottom">Run For Our Lives?<p className="neoGreen">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
+                                        <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                                    </div>
+                                )
+                            } else if (object.is_potentially_hazardous_asteroid === true) {
+                                return(
+                                    <div className="neoBlock" key={`Neo ` + index}>
+                                        <h4>Object {index + 1}: {object.name}</h4>
+                                        <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
+                                        <p className="neoPbottom">Run For Our Lives?<p className="neoRed">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
                                         <a className="button" href={object.nasa_jpl_url} >More Info</a>
                                     </div>
                                 )
@@ -48,26 +57,53 @@ class NearEarthObjects extends Component {
 
                     <div className="item2">
                     <h2 className="compSubHeader">Date: Feb 21st 2021</h2>
-                    <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-21'].map((object, index) => (
-                        <div key={`Neo ` + index} className="neoBlock">
-                            <h4>Object {index + 1}: {object.name}</h4>
-                            <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
-                            <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
-                            <a className="button" href={object.nasa_jpl_url} >More Info</a>
-                        </div>
-                    )) : "Also Loading..."}</div>
+                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-21'].map((object, index) => {
+                                if (object.is_potentially_hazardous_asteroid === false) {
+                                    return(
+                                        <div className="neoBlock" key={`Neo ` + index}>
+                                            <h4>Object {index + 1}: {object.name}</h4>
+                                            <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
+                                            <p className="neoPbottom">Run For Our Lives?<p className="neoGreen">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
+                                            <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                                        </div>
+                                    )
+                                } else if (object.is_potentially_hazardous_asteroid === true) {
+                                    return(
+                                        <div className="neoBlock" key={`Neo ` + index}>
+                                            <h4>Object {index + 1}: {object.name}</h4>
+                                            <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
+                                            <p className="neoPbottom">Run For Our Lives?<p className="neoRed">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
+                                            <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                                        </div>
+                                    )
+                                }
+                            
+                        }) : "Also Loading..."}</div>
                     </div>
 
                     <div className="item2">
                     <h2 className="compSubHeader">Date: Feb 20th 2021</h2>
-                    <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-20'].map((object, index) => (
-                        <div key={`Neo ` + index} className="neoBlock">
-                            <h4>Object {index + 1}: {object.name}</h4>
-                            <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
-                            <p className="neoPbottom">Run For Our Lives? = {`${object.is_potentially_hazardous_asteroid}`}</p>
-                            <a className="button" href={object.nasa_jpl_url} >More Info</a>
-                        </div>
-                    )) : "So Much Loading..."}</div>
+                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-20'].map((object, index) => {
+                            if (object.is_potentially_hazardous_asteroid === false) {
+                                return(
+                                    <div className="neoBlock" key={`Neo ` + index}>
+                                        <h4>Object {index + 1}: {object.name}</h4>
+                                        <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
+                                        <p className="neoPbottom">Run For Our Lives?<p className="neoGreen">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
+                                        <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                                    </div>
+                                )
+                            } else if (object.is_potentially_hazardous_asteroid === true) {
+                                return(
+                                    <div className="neoBlock" key={`Neo ` + index}>
+                                        <h4>Object {index + 1}: {object.name}</h4>
+                                        <p className="neoPtop">Average Diameter: {((object.estimated_diameter.feet.estimated_diameter_min + object.estimated_diameter.feet.estimated_diameter_max)/2).toFixed(2)} ft</p>
+                                        <p className="neoPbottom">Run For Our Lives?<p className="neoRed">{`${object.is_potentially_hazardous_asteroid}` }</p></p>
+                                        <a className="button" href={object.nasa_jpl_url} >More Info</a>
+                                    </div>
+                                )
+                            }
+                        }) : "So Much Loading..."}</div>
                     </div>
                 </div>
             </div>
