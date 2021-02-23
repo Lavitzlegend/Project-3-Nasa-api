@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
 body {
   background-color: #ebebeb;
   color: #333333
 }
 
-header {
+footer {
   display: flex;
   justify-content: space-between;
   padding-left: 1.5rem;
+  background-color: #8d8d8d;
+}
+
+header {
+  background-color: #333333;
+  color: #ebebeb;
 }
 
 nav {
@@ -37,6 +45,22 @@ h4 {
   width: 150px;
 }
 
+.pageTitle {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 64px;
+  text-shadow: -4px -4px 2px #0fb2f2;
+  letter-spacing: 4px;
+  margin: 0;
+  padding: 1rem;
+}
+
+.pageSubTitle {
+  font-size: 28px;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
 .compHeader {
   margin-bottom: 0;
 }
@@ -52,16 +76,7 @@ h4 {
 }
 
 .section1 {
-  height: 30vh;
-}
-
-.section2 {
-  height: 23vh;
-}
-
-.section3 {
-  background-color: #8d8d8d;
-  height: 40vh;
+  padding: 2rem;
 }
 
 .neo {
@@ -88,6 +103,7 @@ h4 {
   max-height: 100px;
   object-fit: cover;
   margin: 0.5rem;
+  align-self: center;
 }
 
 .marsRoverThumbnails {
@@ -133,8 +149,6 @@ h4 {
   grid-template-columns: 40vw 40vw;
   margin-left: 10vw;
   margin-right: 10vw;
-  position: absolute;
-  top: 32vh;
 }
 
 .container2 {

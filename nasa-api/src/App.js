@@ -19,10 +19,8 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>MISC Space App</h1>
-          <a href="https://www.nasa.gov" target="_blank">
-            <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="Nasa Logo" className="logo"/>
-          </a>
+          <h1 className="pageTitle">MISC Space App</h1>
+          
         </header>
           <nav>
             <Link to="/"> Home Page </Link>
