@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import axios from 'axios';
 
 class MarsRoverPhotos extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             roverPhotos: "",
@@ -11,7 +11,7 @@ class MarsRoverPhotos extends Component {
             singlePic: ""
         }
     }
-
+    
     componentDidMount = async () => {
         const apiTest = await axios.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=eIMGP8aHIJwOWGztzhMAeZpVyHKseN8jMSKD6Px6");
         //console.log(apiTest.data.latest_photos)
@@ -33,6 +33,7 @@ class MarsRoverPhotos extends Component {
       }
 
     render () {
+        //console.log(this.props)
         //console.log(this.state.roverPhotos)
         //console.log(this.state.singlePic)
         return (
@@ -43,7 +44,7 @@ class MarsRoverPhotos extends Component {
                 <div>
                     {this.state.singlePic ? 
                     <div className="marsRoverPic">
-                        <h2 className="compSubHeader">Earth Date: {this.state.singlePic.earth_date}</h2>
+                        <h2 className="compSubHeader">Earth Date: {this.props.formatDate(this.state.singlePic.earth_date)}</h2>
                         <h3>Camera: {this.state.singlePic.camera.full_name}</h3>
                         <img src={this.state.singlePic.img_src} alt="Mars Rover Photo" className="roverPic"/>
                     </div>

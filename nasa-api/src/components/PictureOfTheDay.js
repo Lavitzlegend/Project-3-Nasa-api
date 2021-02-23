@@ -26,7 +26,7 @@ class PictureOfTheDay extends Component {
                 <div className="pod">
                     <h1 className="compHeader">Picture of the Day</h1>
                     <h2 className="compSubHeader">{this.state.picture.title}</h2>
-                    <h2 className="compSubHeader">Date: {this.state.picture.date}</h2>
+                    <h2 className="compSubHeader">Date: {this.props.formatDate(this.state.picture.date)}</h2>
                     <iframe className="podPic" src={this.state.picture.url} width='680' height='527'  scrolling='no' frameBorder='0'/>
                     <section className="podExplanation">
                         <p> {this.state.picture.explanation}</p>
