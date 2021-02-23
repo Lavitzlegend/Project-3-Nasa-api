@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import styled, { keyframes } from "styled-components";
-import {slideInDown} from "react-animations"
+import {fadeIn} from "react-animations"
 
 class Modal extends Component {
     constructor(props) {
@@ -9,13 +9,10 @@ class Modal extends Component {
     }
 
     render () {
-        const slideAnimation = keyframes`${slideInDown}`;
+        const fadeAnimation = keyframes`${fadeIn}`;
 
         const MyModal = styled.div`
-        animation: 1s ${slideAnimation};
-        &:active {
-            background-color: yellow;
-        }
+        animation: 1s ${fadeAnimation}
         `
 
         //console.log(this.props.modalState)

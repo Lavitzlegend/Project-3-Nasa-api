@@ -220,11 +220,12 @@ ul {
   width: 40%;
   border: 1px red solid;
   margin: 0 auto;
+  position: absolute
 }
 
 .modal {
   text-align: left;
-  background-color: blue
+  background-color: #333333
 }
 
 .modalBody li {
