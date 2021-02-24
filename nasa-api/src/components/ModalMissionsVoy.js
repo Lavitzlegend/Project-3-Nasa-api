@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import styled, { keyframes } from "styled-components";
 import {fadeIn} from "react-animations"
 
-class ModalMissions extends Component {
+class ModalMissionsVoy extends Component {
     constructor(props) {
         super(props)
         
@@ -19,18 +19,13 @@ class ModalMissions extends Component {
             <div className="modal">
                 <MyAnimation className="modalContent">
                     <div className="modalTitle">
-                        <h2>New Modal</h2>
+                        <h2>Voyager Mission Overview</h2>
                     </div>
                     <div className="modalBody">
-                        <p>The atmosphere of Mars is much thinner than Earth's. The average surface pressure is less than 1% of the Earth's value.</p>
-                        <ul>
-                            <li>At sea level: 101,325Pa</li>
-                            <li>New York City: 101,600Pa</li>
-                            <li>Mexico City: 81,360Pa</li>
-                            <li>La Paz, Bolivia: 73,775Pa</li>
-                        </ul>
+                        <p>The twin Voyager 1 and 2 spacecraft are exploring where nothing from Earth has flown before. Continuing on their more-than-40-year journey since their 1977 launches, they each are much farther away from Earth and the sun than Pluto. n (VIM), will explore the outermost edge of the Sun's domain.</p>
                         <nav className="navModal">
                             <button className="modalButton" onClick={() => this.props.handleShow()}>Hide</button>
+                            <a className="modalButton" href="https://voyager.jpl.nasa.gov/mission/" target="_blank">Even more!</a>
                         </nav>
                     </div>
                 </MyAnimation>
@@ -39,4 +34,4 @@ class ModalMissions extends Component {
     }
 }
 
-export default ModalMissions;
+export default ModalMissionsVoy;
