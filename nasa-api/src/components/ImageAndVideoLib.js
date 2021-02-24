@@ -8,19 +8,19 @@ class ImageAndVideoLib extends Component {
         super(props);
 
         this.state = {
-            imageVideo: [],
+            imageVideoVoy: [],
             imageVideoGal: [],
             apiDataLoaded: false
         }
     }
 
     componentDidMount = async () => {
-        const imageVideoData = await axios.get(`https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981`)
+        const imageVideoDataVoy = await axios.get(`https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981`)
         const imageVideoDataGal = await axios.get(`https://images-api.nasa.gov/search?q=galileo&year_start=2001&year_end=2002`)
-        console.log(imageVideoData);
+        console.log(imageVideoDataVoy);
         
           this.setState({
-            imageVideo: imageVideoData.data.collection.items,
+            imageVideoVoy: imageVideoDataVoy.data.collection.items,
             imageVideoGal: imageVideoDataGal.data.collection.items,
             apiDataLoaded: true
         })
@@ -30,10 +30,10 @@ class ImageAndVideoLib extends Component {
         return(
             <div className="imgvidlib">
                 <h1 className="compHeader">Images And Videos</h1>
-                {this.state.apiDataLoaded && this.state.imageVideo.map(image => (
+                {this.state.apiDataLoaded && this.state.imageVideoVoy.map(imageVoy => (
                     <div>
-                        <img className="voyPic" src={image.links[0].href}/>
-                        <p className="voyDesc"> {image.data[0].description}</p>
+                        <img className="voyPic" src={imageVoy.links[0].href}/>
+                        <p className="voyDesc"> {imageVoy.data[0].description}</p>
                     </div>
                 ))}
 
