@@ -41,20 +41,25 @@ ul {
   padding-left: 0;
 }
 
-.button {
+.button, .backToTop {
   background-color: #333333;
   border: 2px solid #ebebeb;
   border-radius: 5px;
   padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
-.modalButton {
+.modalButton, .missionButton {
   background-color: #ebebeb;
   color: #333333;
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
   margin: 1rem 0 0 1.3rem;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+.missionButton {
+  margin: 0;
   padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
@@ -87,7 +92,7 @@ ul {
   margin: 0;
 }
 
-.rover, .pod, .marsWeather, .neo, .section1 {
+.rover, .pod, .marsWeather, .neo, .section1, .imgvidlib {
   color: #ebebeb;
   background-color: #414141;
   padding-top: 0.5rem;
@@ -176,7 +181,7 @@ ul {
   margin-top: 10%
 }
 
-.container {
+.container, .container3 {
   display: grid;
   grid-template-columns: 40vw 40vw;
   margin-left: 10vw;
@@ -288,4 +293,35 @@ ul {
   justify-content: flex-end;
   padding: 0  2rem 0 0;
   background-color: #4e4e4e
+}
+
+.navMission {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  background-color: #414141;
+}
+
+.imgvidlibMission {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+}
+
+.voyPic, .galPic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.voyDesc, .galDesc {
+  padding: 0.5rem;
+  text-align: justify;
+  text-indent: 1rem;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
 }

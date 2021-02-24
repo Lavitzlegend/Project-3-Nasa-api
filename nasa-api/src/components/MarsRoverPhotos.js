@@ -62,7 +62,7 @@ class MarsRoverPhotos extends Component {
                     </div>
                 </div>
             : <p>... Loading ...</p>}
-                
+            <a className="backToTop" href="#top">Back to top</a>    
             </div>
         )
     }

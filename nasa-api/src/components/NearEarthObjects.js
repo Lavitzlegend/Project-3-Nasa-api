@@ -105,6 +105,7 @@ class NearEarthObjects extends Component {
                         }) : "So Much Loading..."}</div>
                     </div>
                 </div>
+                <a className="backToTop" href="#top">Back to top</a>
             </div>
         )
     }
