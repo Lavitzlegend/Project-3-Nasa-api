@@ -14,8 +14,7 @@ class NearEarthObjects extends Component {
     }
 
     componentDidMount = async () => {
-        const nearEarthObjects = await axios.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-20&end_date=2021-02-22&api_key=${apiKey}`)
-        // console.log(nearEarthObjects.data.near_earth_objects);
+        const nearEarthObjects = await axios.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-21&end_date=2021-02-23&api_key=${apiKey}`)
        
         this.setState({
             objects: nearEarthObjects.data.near_earth_objects,
@@ -31,8 +30,8 @@ class NearEarthObjects extends Component {
                 </div>
                 <div className="container2">
                     <div className="item2">
-                        <h2 className="compSubHeader">Date: Feb 22nd 2021</h2>
-                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-22'].map((object, index) => {
+                        <h2 className="compSubHeader">Date: Feb 23rd 2021</h2>
+                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-23'].map((object, index) => {
                             if (object.is_potentially_hazardous_asteroid === false) {
                                 return(
                                     <div className="neoBlock" key={`Neo ` + index}>
@@ -56,8 +55,8 @@ class NearEarthObjects extends Component {
                     </div>
 
                     <div className="item2">
-                    <h2 className="compSubHeader">Date: Feb 21st 2021</h2>
-                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-21'].map((object, index) => {
+                    <h2 className="compSubHeader">Date: Feb 22nd 2021</h2>
+                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-22'].map((object, index) => {
                                 if (object.is_potentially_hazardous_asteroid === false) {
                                     return(
                                         <div className="neoBlock" key={`Neo ` + index}>
@@ -82,8 +81,8 @@ class NearEarthObjects extends Component {
                     </div>
 
                     <div className="item2">
-                    <h2 className="compSubHeader">Date: Feb 20th 2021</h2>
-                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-20'].map((object, index) => {
+                    <h2 className="compSubHeader">Date: Feb 21st 2021</h2>
+                        <div>{this.state.apiDataLoaded ? this.state.objects['2021-02-21'].map((object, index) => {
                             if (object.is_potentially_hazardous_asteroid === false) {
                                 return(
                                     <div className="neoBlock" key={`Neo ` + index}>

@@ -19,10 +19,7 @@ class InSightWeather extends Component {
 
     componentDidMount = async () => {
         const inSight = await axios.get(`https://api.nasa.gov/insight_weather/?api_key=${apiKey}&feedtype=json&ver=1.0`)
-        //console.log(inSight);
-        const solKeys = inSight.data.sol_keys.map(key => (this.state.solKeys.unshift(key)));
-        //console.log(solKeys)
-        //console.log(this.state.solKeys)
+        const solKeys = inSight.data.sol_keys.map(key => (this.state.solKeys.unshift(key)))
     
         this.setState({
             weatherInfo: inSight.data,
@@ -37,7 +34,6 @@ class InSightWeather extends Component {
         const day=parseInt(today.getDate()+1);
         const year= parseInt(today.getFullYear());
         const date= new Date(year, month, day)
-        //console.log(date.toDateString())
         return (date.toDateString())
     }
 
@@ -46,7 +42,6 @@ class InSightWeather extends Component {
         this.setState({
             show: !this.state.show
         })
-        //console.log(this.state.show)
         return showModalSt
       }
 
