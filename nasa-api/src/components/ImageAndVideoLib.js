@@ -10,6 +10,8 @@ class ImageAndVideoLib extends Component {
         this.state = {
             imageVideo: [],
             imageVideoMeta: [],
+            imageVideoGal: [],
+            imageVideoGalMeta: [],
             apiDataLoaded: false
         }
     }
@@ -17,12 +19,16 @@ class ImageAndVideoLib extends Component {
     componentDidMount = async () => {
         const imageVideoData = await axios.get(`https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981`)
         const imageVideoDataMeta = await axios.get(`https://images-api.nasa.gov/asset/172_ISS-Slosh?api_key=${nasaAPIKey}`)
+        const imageVideoDataGal = await axios.get(`https://images-api.nasa.gov/search?q=galileo&year_start=1977&year_end=2011`)
+        const imageVideoDataGalMeta = await axios.get(`https://images-api.nasa.gov/asset/172_ISS-Slosh?api_key=${nasaAPIKey}`)
         console.log("test");
         console.log(imageVideoData);
         console.log(imageVideoDataMeta);
           this.setState({
             imageVideo: imageVideoData.data.collection.items,
             imageVideoMeta: imageVideoDataMeta.data.collection.items,
+            imageVideoGal: imageVideoDataGal.data.collection.items,
+            imageVideoGalMeta: imageVideoDataGalMeta.data.collection.items,
             apiDataLoaded: true
         })
       }
@@ -34,12 +40,23 @@ class ImageAndVideoLib extends Component {
                 <h1 className="compHeader">Images And Videos</h1>
                 {this.state.apiDataLoaded && this.state.imageVideo.map(image => (
                     <div>
-                    <img className="podPic" src={image.links[0].href}/>
-                    <p className="podDesc"> {image.data[0].description}</p>
+                        <img className="voyPic" src={image.links[0].href}/>
+                        <p className="voyDesc"> {image.data[0].description}</p>
                     </div>
                 ))}
-                
+
+            <div className="imgvidlibgal">
+                {this.state.apiDataLoaded && this.state.imageVideoGal.map(imageGal => (
+                    <div>
+                    <img className="galPic" src={imageGal.links[0].href}/>
+                    <p className="galDesc"> {imageGal.data[0].description}</p>
+                    </div>
+                ))}
+
             </div>
+            </div>
+
+
         )
     }
 }
