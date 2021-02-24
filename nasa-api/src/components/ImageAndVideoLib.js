@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import ModalMissions from "./ModalMissions"
+import ModalMissionsVoy from "./ModalMissionsVoy"
+import ModalMissionsGal from "./ModalMissionsGal"
 
 const nasaAPIKey = "dKN5xKkmeDWUEQEMaF13fpONtxkimP7vr0hPgjC7"
 
@@ -12,14 +13,14 @@ class ImageAndVideoLib extends Component {
             imageVideoVoy: [],
             imageVideoGal: [],
             apiDataLoaded: false,
-            show: false
+            showVoy: false
         }
     }
 
     componentDidMount = async () => {
         const imageVideoDataVoy = await axios.get(`https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981`)
         const imageVideoDataGal = await axios.get(`https://images-api.nasa.gov/search?q=galileo&year_start=2001&year_end=2002`)
-        console.log(imageVideoDataVoy);
+        //console.log(imageVideoDataVoy);
         
           this.setState({
             imageVideoVoy: imageVideoDataVoy.data.collection.items,
@@ -28,34 +29,32 @@ class ImageAndVideoLib extends Component {
         })
       }
 
-      showModal = () => {
-        const showModalSt= this.state.show;
+      showModalVoy = () => {
         this.setState({
-            show: !this.state.show
+            showVoy: !this.state.showVoy,
         })
-        return showModalSt
       }
 
-      handleClik = (e) => {
-        console.log(e.target.classList[1])
-        const target=e.target.classList[1];
-        //console.log(target);
-        return target
-        };
-   
+      showModalGal = () => {
+        this.setState({
+            showGal: !this.state.showGal,
+        })
+      }
+
     render() {
         return(
             <div className="imgvidlib">
                 <h1 className="compHeader">Image And Video Libary</h1>
                 <div className="modalDisplay">
-                    {this.state.show ? <ModalMissions handleShow={this.showModal}/> : <p></p>}
+                    {this.state.showVoy ? <ModalMissionsVoy handleShow={this.showModalVoy}/> : <p></p>}
+                    {this.state.showGal ? <ModalMissionsGal handleShow={this.showModalGal}/> : <p></p>}
                 </div>
                 <div className="container3">
                     <div className="imgvidlibMission">
                         <nav className="navMission">
                             <h2 className="compSubHeader">Voyager</h2>
                             <div className="modalShow">
-                                <button className="missionButton voyager" onClick={() => this.showModal()} onClick={this.handleClik} >More about this Mission</button>
+                                <button className="missionButton voyager" onClick={() => this.showModalVoy()}>More about this Mission</button>
                             </div>
                         </nav>
                         {this.state.apiDataLoaded && this.state.imageVideoVoy.map(imageVoy => (
@@ -71,7 +70,7 @@ class ImageAndVideoLib extends Component {
                         <nav className="navMission">
                             <h2 className="compSubHeader">Galileo</h2>
                             <div className="modalShow">
-                                    <button className="missionButton galileo" onClick={() => this.showModal()} >More about this Mission</button>
+                                    <button className="missionButton galileo" onClick={() => this.showModalGal()} >More about this Mission</button>
                             </div>
                         </nav>
                         {this.state.apiDataLoaded && this.state.imageVideoGal.map(imageGal => (
