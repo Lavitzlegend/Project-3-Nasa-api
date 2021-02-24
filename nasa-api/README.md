@@ -26,15 +26,7 @@ Our take on a space app showing the most interesting information available from 
 
 ## Theory
 
-We wanted to create an app where any user can sign up, login, and track their fitness journey. We utilized two separate tables named Workouts and Users that have a many to many relationship. They work through a JOIN table called UserWorkouts that will display on the user's profile page all the workouts they have added to the JOIN table.
 
-A workout can be added to the workouts index page where you would enter the name, description, and an embed link to a YouTube video of the activity/exercise. Once a new workout is added it will show in the dropdown selector on the user's profile page.
-
-Combining the above tables gives the user a way to keep a history of all the workouts they've done as well as challenging themselves by trying out workouts other users have created. This way you can track your own progress as well as participate in a larger fitness community.
-   
-## How The Join Table Works
-
-On the users profile they have a drop down with all the workouts added to the Workouts table. Once they select one from the drop down and press the Add Selected Workout button it runs the addWorkout function inside the users.js controller which does a foundUser.addWorkout(foundWorkout). This method is available because of the belongsToMany associations detailed in the workout.js and user.js models.
    
 ## Main Features
 
