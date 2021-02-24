@@ -16,13 +16,11 @@ class App extends Component {
   }
 
   changeFormatDate = (xDate) => {
-    //console.log(xDate)
     const today= new Date(xDate)
     const month=parseInt(today.getMonth());
     const day=parseInt(today.getDate()+1);
     const year= parseInt(today.getFullYear());
     const date= new Date(year, month, day)
-    //console.log(date.toDateString())
     return (date.toDateString())
 }
 

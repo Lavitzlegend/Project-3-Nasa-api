@@ -16,7 +16,7 @@ class MarsRoverPhotos extends Component {
     
     componentDidMount = async () => {
         const apiTest = await axios.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=eIMGP8aHIJwOWGztzhMAeZpVyHKseN8jMSKD6Px6");
-        //console.log(apiTest.data.latest_photos)
+        
         this.setState ({
             roverPhotos: apiTest.data.latest_photos,
             dataLoaded: true
@@ -24,20 +24,15 @@ class MarsRoverPhotos extends Component {
       }
 
       handleClik = (e) => {
-          //console.log(e.target.id)
           const foundPic = this.state.roverPhotos.find(onePic => {
               return onePic.id == e.target.id
           });
           this.setState({
               singlePic: foundPic
           })
-          //console.log(foundPic)
       }
 
     render () {
-        //console.log(this.props)
-        //console.log(this.state.roverPhotos)
-        //console.log(this.state.singlePic)
         return (
             <div className="rover">
                 <h1 className="compHeader">Mars Rover Photos</h1>

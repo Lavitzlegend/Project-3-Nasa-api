@@ -28,7 +28,6 @@ class InSightWeather extends Component {
     }
 
     changeFormatDate = (xDate) => {
-        //console.log(xDate)
         const today= new Date(xDate)
         const month=parseInt(today.getMonth());
         const day=parseInt(today.getDate()+1);
