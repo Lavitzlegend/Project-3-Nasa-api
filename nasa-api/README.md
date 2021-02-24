@@ -15,15 +15,14 @@ Profile Page:
 
 ## Preview
 
-This is our take on a Workout tracking and sharing app.
+Our take on a space app showing the most interesting information available from the NASA Api
 
 ## Technology Used
 
 - Vanilla javascript, css, and html
-- NodeJS, Sequelize, pg, express, ejs, method-override, dotenv
-- Embedded Youtube videos
-- Linked a font from fonts.googleapis.
-- Heroku hosted server and database
+- React, React-router-dom, React-animations, Styled-components, surge
+- Embedded pictures and videos
+- Linked a font from fonts.googleapis
 
 ## Theory
 
