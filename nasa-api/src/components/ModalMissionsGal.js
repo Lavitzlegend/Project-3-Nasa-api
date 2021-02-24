@@ -17,15 +17,15 @@ class ModalMissionsGal extends Component {
         return (
             console.log(this.props),
             <div className="modal">
-                <MyAnimation className="modalContent">
+                <MyAnimation className="modalContentMission">
                     <div className="modalTitle">
                         <h2>Galileo Mission Overview</h2>
                     </div>
                     <div className="modalBody">
-                        <p>Galileo orbited Jupiter for almost eight years (1993-2003), and made close passes by all its major moons. Its camera and nine other instruments sent back reports that allowed scientists to determine, among other things, that Jupiter’s icy moon Europa probably has a subsurface ocean with more water than the total amount found on Earth.</p>
-                        <nav className="navModal">
+                        <p>Galileo orbited Jupiter for almost eight years (1996-2003), and made close passes by all its major moons. Its camera and nine other instruments sent back reports that allowed scientists to determine, among other things, that Jupiter’s icy moon Europa probably has a subsurface ocean with more water than the total amount found on Earth.</p>
+                        <nav className="navModalMission">
                             <button className="modalButton" onClick={() => this.props.handleShow()}>Hide</button>
-                            <a className="modalButton" href="https://solarsystem.nasa.gov/missions/galileo/overview/" target="_blank">Even more!</a>
+                            <a className="modalButtonMission" href="https://solarsystem.nasa.gov/missions/galileo/overview/" target="_blank">Even more!</a>
                         </nav>
                     </div>
                 </MyAnimation>

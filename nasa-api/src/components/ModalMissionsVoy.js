@@ -17,15 +17,15 @@ class ModalMissionsVoy extends Component {
         return (
             console.log(this.props),
             <div className="modal">
-                <MyAnimation className="modalContent">
+                <MyAnimation className="modalContentMission">
                     <div className="modalTitle">
                         <h2>Voyager Mission Overview</h2>
                     </div>
                     <div className="modalBody">
                         <p>The twin Voyager 1 and 2 spacecraft are exploring where nothing from Earth has flown before. Continuing on their more-than-40-year journey since their 1977 launches, they each are much farther away from Earth and the sun than Pluto. n (VIM), will explore the outermost edge of the Sun's domain.</p>
-                        <nav className="navModal">
+                        <nav className="navModalMission">
                             <button className="modalButton" onClick={() => this.props.handleShow()}>Hide</button>
-                            <a className="modalButton" href="https://voyager.jpl.nasa.gov/mission/" target="_blank">Even more!</a>
+                            <a className="modalButtonMission" href="https://voyager.jpl.nasa.gov/mission/" target="_blank">Even more!</a>
                         </nav>
                     </div>
                 </MyAnimation>
