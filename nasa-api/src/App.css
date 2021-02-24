@@ -103,6 +103,20 @@ ul {
   margin: 1rem 0 2rem 0;
 }
 
+.voyPic {
+  border: 3px solid #ebebeb;
+  border-radius: 5px;
+  max-width: 70%;
+  margin: 1rem 0 2rem 0;
+}
+
+.galPic {
+  border: 3px solid #ebebeb;
+  border-radius: 5px;
+  max-width: 70%;
+  margin: 1rem 0 2rem 0;
+}
+
 .thumbnail {
   border: 1px solid #ebebeb;
   max-width: 100px;
