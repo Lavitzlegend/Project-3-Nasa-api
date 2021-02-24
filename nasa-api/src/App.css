@@ -248,19 +248,18 @@ ul {
 }
 
 .neoRed {
-  margin: 0 0 1rem 0;
+  margin: 0 5rem 1rem 5rem;
   background-color: rgb(202, 46, 46);
+  font-weight: bold;
+
 }
 
 .modalBody {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .modalBody li {
-  margin-left: 10rem;
+  margin-left: 20%;
 }
 
 .modalBody ul {
@@ -277,8 +276,16 @@ ul {
   background-color: #4e4e4e;
   text-indent: 1rem;
   padding: 1rem;
-  position: absolute;
-  width: 95vw;
-  height: 85vh;
-  left: 0%
+  position: fixed;
+  text-align: left;
+  width: 40%;
+  right: 5%;
+  top: 40%;
+}
+
+.navModal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0  2rem 0 0;
+  background-color: #4e4e4e
 }

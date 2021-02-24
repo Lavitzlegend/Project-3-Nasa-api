@@ -29,10 +29,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1 className="pageTitle">MISC Space App</h1>
-          
-        </header>
+        <div className="topHeader">
+          <header>
+            <h1 className="pageTitle">MISC Space App</h1>
+          </header>
+
           <nav>
             <Link to="/"> Home Page </Link>
             <Link to="/pictureoftheday"> Picture of the Day </Link>
@@ -41,8 +42,8 @@ class App extends Component {
             <Link to="/imageandvideolib"> Image And Video Library </Link>
             <Link to="/neo"> Near Earth Objects </Link>
           </nav>
+        </div>
       
-        
         <Route exact path="/" render={() => (
           <HomePage />
         )} />
