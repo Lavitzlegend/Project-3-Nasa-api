@@ -6,11 +6,13 @@ Ana Cecilia Maldonado, Thomas Gores, and Jordan Dyar
 ## App link and Home Page
 [Home Page Link]()
 
+![Screen Shot 2021-02-24 at 1 38 29 PM](https://user-images.githubusercontent.com/74753181/109056237-d29b3300-76a5-11eb-9d3c-92c941ceab58.png)
+
 ## Images
 
 ### Wireframe
-![WF1] (/ReadMeImages/wireframe1.jpg)
-![WF2] (/ReadMeImages/wireframe2.jpg)
+![WF1](/ReadMeImages/wireframe1.jpg)
+![WF2](/ReadMeImages/wireframe2.jpg)
 
 ## Preview
 
