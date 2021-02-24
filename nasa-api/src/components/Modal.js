@@ -13,15 +13,13 @@ class Modal extends Component {
         const fadeAnimationIn = keyframes`${fadeIn}`;
         const fadeAnimationOut = keyframes`${fadeOut}`;
 
-        const MyModal = styled.div`
-        text-align: left;
-        animation: 0.5s ${fadeAnimationIn}
+        const MyAnimation = styled.div`
+        animation: 1s ${fadeAnimationIn}
         `
-
         return (
             console.log(this.props),
             <div className="modal">
-                <MyModal className="modalContent">
+                <MyAnimation className="modalContent">
                     <div className="modalTitle">
                         <h2>Comparison between Mars and Earts's atmospheric pressure</h2>
                     </div>
@@ -33,9 +31,11 @@ class Modal extends Component {
                             <li>Mexico City: 81,360Pa</li>
                             <li>La Paz, Bolivia: 73,775Pa</li>
                         </ul>
-                        <button onClick={() => this.props.handleShow()}>Hide</button>
+                        <nav className="navModal">
+                            <button className="modalButton" onClick={() => this.props.handleShow()}>Hide</button>
+                        </nav>
                     </div>
-                </MyModal>
+                </MyAnimation>
             </div>
         )
     }
