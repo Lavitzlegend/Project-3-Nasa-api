@@ -11,8 +11,8 @@ Ana Cecilia Maldonado, Thomas Gores, and Jordan Dyar
 ## Images
 
 ### Wireframe
-![WF1](/ReadMeImages/wireframe1.jpg)
-![WF2](/ReadMeImages/wireframe2.jpg)
+![WF1](https://github.com/Lavitzlegend/Project-3-Nasa-api/tree/master/nasa-api/ReadMeImages/wireframe1.jpg)
+![WF2](https://github.com/Lavitzlegend/Project-3-Nasa-api/tree/master/nasa-api/ReadMeImages/wireframe2.jpg)
 
 ## Preview
 
