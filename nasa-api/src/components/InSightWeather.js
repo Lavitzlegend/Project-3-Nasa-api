@@ -73,11 +73,11 @@ class InSightWeather extends Component {
                     <div className="weatherInfo">
                         <h2>Insight Rover:</h2><br></br>
                         <h2 className="compSubHeader">Most Recent Sol: {this.state.apiDataLoaded && renderSolKey1}</h2>
-                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && this.props.formatDate(Day1NumsArray)}</h3>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day1NumsArray}</h3>
                         <h4>Average Pressure (Pa): {this.state.apiDataLoaded && renderWeatherKey1.PRE.av}</h4>
                         <br></br>
                         <h2 className="compSubHeader">Sol: {this.state.apiDataLoaded && renderSolKey2}</h2>
-                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && this.props.formatDate(Day2NumsArray)}</h3>
+                        <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && Day2NumsArray}</h3>
                         <h4>Average Pressure (Pa): {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
                         <div className="modalShow">
                             <button className="modalButton" onClick={() => this.showModal()}> What does this mean? </button>
