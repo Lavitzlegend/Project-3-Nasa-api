@@ -44,7 +44,7 @@ class ImageAndVideoLib extends Component {
     render() {
         return(
             <div className="imgvidlib">
-                <h1 className="compHeader">Image And Video Libary</h1>
+                <h1 className="compHeader">Image Library Archive</h1>
                 <div className="modalDisplay">
                     {this.state.showVoy ? <ModalMissionsVoy handleShow={this.showModalVoy}/> : <p></p>}
                     {this.state.showGal ? <ModalMissionsGal handleShow={this.showModalGal}/> : <p></p>}

@@ -37,7 +37,7 @@ class App extends Component {
             <Link to="/pictureoftheday"> Picture of the Day </Link>
             <Link to="/rover"> Mars Rover Photos </Link>
             <Link to="/insightweather"> Mars Weather </Link>
-            <Link to="/imageandvideolib"> Image And Video Library </Link>
+            <Link to="/imageandvideolib"> Image Library Archive </Link>
             <Link to="/neo"> Near Earth Objects </Link>
           </nav>
         </div>
