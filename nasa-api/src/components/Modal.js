@@ -21,7 +21,7 @@ class Modal extends Component {
             <div className="modal">
                 <MyAnimation className="modalContent">
                     <div className="modalTitle">
-                        <h2>Comparison between Mars and Earts's atmospheric pressure</h2>
+                        <h2>Comparison between Mars and Earth's atmospheric pressure</h2>
                     </div>
                     <div className="modalBody">
                         <p>The atmosphere of Mars is much thinner than Earth's. The average surface pressure is less than 1% of the Earth's value.</p>
