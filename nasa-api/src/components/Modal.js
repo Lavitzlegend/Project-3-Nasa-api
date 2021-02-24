@@ -32,6 +32,7 @@ class Modal extends Component {
                             <li>New York City: 101,600Pa</li>
                             <li>Mexico City: 81,360Pa</li>
                             <li>La Paz, Bolivia: 73,775Pa</li>
+                            <li>Mt. Everest: 33,730Pa</li>
                         </ul>
                         <button onClick={() => this.props.handleShow()}>Hide</button>
                     </div>
