@@ -26,6 +26,17 @@ const HomePage = (props) => {
                 <div className="item">
                     <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nhq202102180017.jpg" alt="Perseverance Landing" className="marsCover"/>
                 </div>
+
+                <div className="item">
+                    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/1-insight-lander-021221-1041.jpg" alt="Mars Cover" className="marsCover"/>
+                </div>
+
+                <div className="itemPar">
+                    <p className="darkContent">When a spacecraft lander begins operations on Mars, the passing Martian days (sols) have been tracked using a simple numerical count.</p>
+                    <p className="darkContent">For example, <b>InSight Lander</b> currently has been on mission for about 800 sols; while <b>Curiosity Rover</b> has been in Mars for more than 4,000 sols!</p>
+                    <a className="button" href="https://www.nasa.gov/mission_pages/insight/main/index.html" target="_blank">More about InSight</a> 
+                    <a className="button" href="https://www.nasa.gov/mission_pages/msl/index.html" target="_blank">More about Curiosity</a>
+                </div>
             </div>
             <section className="section2"></section>
             <footer>

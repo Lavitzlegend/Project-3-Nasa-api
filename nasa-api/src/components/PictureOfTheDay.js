@@ -43,7 +43,6 @@ class PictureOfTheDay extends Component {
                     <img className="podPic" src={this.state.picture.url} />
                     <section className="podExplanation">
                         <p> {this.state.picture.explanation}</p>
-                        <h3>Copyright: {this.state.picture.copyright}</h3>
                     </section>
                 </div>
             )
