@@ -28,12 +28,13 @@ class ImageAndVideoLib extends Component {
         
     render() {
         return(
-            <div className="imgvidlib">
+            <div className="imgvidlibvoy">
                 <h1 className="compHeader">Images And Videos</h1>
                 {this.state.apiDataLoaded && this.state.imageVideoVoy.map(imageVoy => (
                     <div>
                         <img className="voyPic" src={imageVoy.links[0].href}/>
                         <p className="voyDesc"> {imageVoy.data[0].description}</p>
+                        <p className="voyDate"> {imageVoy.data[0].date_created}</p>
                     </div>
                 ))}
 
@@ -42,6 +43,7 @@ class ImageAndVideoLib extends Component {
                             <div>
                             <img className="galPic" src={imageGal.links[0].href}/>
                             <p className="galDesc"> {imageGal.data[0].description}</p>
+                            <p className="galDate"> {imageGal.data[0].date_created}</p>
                             </div>
                         ))}
                     </div>
