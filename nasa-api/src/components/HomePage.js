@@ -55,6 +55,7 @@ const HomePage = (props) => {
                     </a>
                 </div>
             </footer>
+            <a className="backToTop" href="#top">Back to top</a>
         </div>
     )
 }
