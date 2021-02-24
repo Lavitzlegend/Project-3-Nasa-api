@@ -14,13 +14,13 @@ class PictureOfTheDay extends Component {
 
     componentDidMount = async () => {
         const pictureData = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${nasaAPIKey}`)
-        console.log(pictureData.data);
           this.setState({
           picture: pictureData.data
         })
       }
-
+      
     render() {
+        console.log(this.props)
         if (this.state.picture.media_type === "video") {
             return(
                 <div className="pod">
@@ -39,7 +39,7 @@ class PictureOfTheDay extends Component {
                 <div className="pod">
                     <h1 className="compHeader">Picture of the Day</h1>
                     <h2 className="compSubHeader">{this.state.picture.title}</h2>
-                    <h2 className="compSubHeader">Date: {this.state.picture.date}</h2>
+                    <h2 className="compSubHeader">Date: {this.props.formatDate(this.state.picture.date)}</h2>
                     <img className="podPic" src={this.state.picture.url} />
                     <section className="podExplanation">
                         <p> {this.state.picture.explanation}</p>

@@ -31,7 +31,6 @@ class MarsRoverPhotos extends Component {
           this.setState({
               singlePic: foundPic
           })
-          //console.log(foundPic)
       }
 
     render () {
