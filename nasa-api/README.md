@@ -3,16 +3,15 @@
 ## Authors
 Ana Cecilia Maldonado, Thomas Gores, and Jordan Dyar
 
+## Images
 ## App link and Home Page
 [Home Page Link]()
 
 ![Screen Shot 2021-02-24 at 1 38 29 PM](https://user-images.githubusercontent.com/74753181/109056237-d29b3300-76a5-11eb-9d3c-92c941ceab58.png)
 
-## Images
-
 ### Wireframe
-![WF1](https://github.com/Lavitzlegend/Project-3-Nasa-api/tree/master/nasa-api/ReadMeImages/wireframe1.jpg)
-![WF2](https://github.com/Lavitzlegend/Project-3-Nasa-api/tree/master/nasa-api/ReadMeImages/wireframe2.jpg)
+![IMG_8301 copy](https://user-images.githubusercontent.com/74725198/109069833-5dd0f480-76b7-11eb-82e4-1b51bcb97d5c.jpg)
+![IMG_8302 copy 2](https://user-images.githubusercontent.com/74725198/109069972-8e189300-76b7-11eb-8f1e-2dc12cfc616b.jpg)
 
 ## Preview
 
@@ -21,15 +20,11 @@ Our take on a space app showing the most interesting information available from 
 ## Technologies Used
 
 - Javascript, CSS, React:
-    - Axios, React-router-dom, React-animations, Styled-components, Surge
+    - JSX, Axios, React-router-dom, React-animations, Styled-components, Surge
 - NASA Open APIs
 - Embedded pictures and videos
 - Linked a font from fonts.googleapis
 
-## Theory
-- ??
-
-   
 ## Main Features
 
 - Landing page welcomes the user to the App and shows interesting information that will be useful while navigating throughout the different components, providing access to the original web sites for more information.
@@ -40,20 +35,6 @@ Our take on a space app showing the most interesting information available from 
     - **Image Library:** Shows a collection of photographs from Voyager (1980's) and Galileo's (2000's) missions, along with options to display modals with a brief summary of each of the missions as well as links to their NASA's websites. https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981 & https://images-api.nasa.gov/search?q=galileo&year_start=2001&year_end=2002
     - **Near Earth Objects:** Displays a list of Asteroids based on their closes approach date to Earth including their name, size and potential hazardoudness. Links to detailed information for each Asteroid are included for the user to click. https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-21&end_date=2021-02-23&api_key=DEMO_KEY
 
-
-## User Stories
-
-1. I want to see the homepage when I go to the URL
-2. I should be able to signup as a new user
-3. I should be able to login to my profile page as an existing user 
-4. I should see how long my account has been active 
-5. I want to see a list of all possible workouts 
-6. I should be able to add to the “My Workouts” section of my profile a new workout
-7. I want to have a link to any workouts added to My Workouts to see more info about that workout and/or edit the workout
-8. There should be a link to an index page of all workouts with a link to create a new workout
-9. I should be able to view the workout video without leaving the workout profile page
-10. I should be able to logout
-11. ACCORDING TO OUR "LEADER", THE PASSWORD SHOULD NOT BE DISPLAYED, lol
 
 ## Goals
 ### Minimum Viable Product
@@ -72,16 +53,11 @@ Our take on a space app showing the most interesting information available from 
 ### Strecth Goal 3
 + Photo carousel.
 
-
 ## Challenges
 - Obtaining data from different end-points and and requests.
 - Ensuring the dates had the appropriate format to be displayed consistently accross the components.
+- API responding with an object insted of an array, which not allowed to "map" the response.
 
-
-## Wireframe
-![20210201_132114 (1)](https://user-images.githubusercontent.com/74585897/106974409-8180ca80-6709-11eb-9fd4-5d1922e19e2d.jpg)
-
-<img width="731" alt="Untitled 3" src="https://user-images.githubusercontent.com/74585897/106975533-965e5d80-670b-11eb-8bf8-0c080da75be2.png">
 
 
 
