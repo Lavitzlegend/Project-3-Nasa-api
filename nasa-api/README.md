@@ -1,7 +1,6 @@
 # Project 3 - MISC Space App
 
 ## Authors
-
 Ana Cecilia Maldonado, Thomas Gores, and Jordan Dyar
 
 ## App link and Home Page
@@ -17,10 +16,11 @@ Profile Page:
 
 Our take on a space app showing the most interesting information available from the NASA Api
 
-## Technology Used
+## Technologies Used
 
-- Vanilla javascript, css, and html
-- React, React-router-dom, React-animations, Styled-components, surge
+- Javascript, CSS, React:
+    - Axios, React-router-dom, React-animations, Styled-components, Surge
+- NASA Open APIs
 - Embedded pictures and videos
 - Linked a font from fonts.googleapis
 
@@ -30,16 +30,14 @@ Our take on a space app showing the most interesting information available from 
    
 ## Main Features
 
-- Landing page links to login or create an account and takes you to the respective EJS files
-- Using text and password inputs with req.body to pass them into their respective tables
-- Profile page utilizes a few for-loops to display all the workouts in the Workout table as well as all the workouts tied to the current userId in the JOIN table
-- BelongsToMany associations for both User and Workout classes
-- Migration and seeder files to ensure Tables are correct in the database and that there are some workouts in the the table to choose initially
-- YouTube embed links show as embedded videos in the workout show page
-- package.json file has the required node module dependencies
-- MVC architecture utilized for correct express and sequelize functionality
-- Foreign and other keys to link the userId and workoutId primary keys
-- Unique constraint added to JOIN table so the user cannot add the same workout twice
+- Landing page welcomes the user to the App and shows interesting information that will be useful while navigating throughout the different components, providing access to the original web sites for more information.
+- The navigation bar at the top of the web page will direct the user to each of the components from which API calls were made to pull data from:
+    - **Picture of the Day:** Shows today's Astronomy Picture of the Day (APOD) along with a brief explanation written by a professional astronomer. This component will allow to display videos as well. https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
+    - **Mars Rover Photos:** Shows the latest photos from the collection gathered by NASA's Curiosity rover on Mars along with the Earth date it was taken and the camera that was used. https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=DEMO_KEY
+    - **Mars Weather:** Displays a per-Sol summary data for each of the last seven available Sols (Martian Days) taken from NASA’s InSight Mars lander that takes continuous weather measurements (temperature, wind, pressure) on the surface of Mars at Elysium Planitia. This component allow the user to display a modal with a comparison between Mars and Earth's atmosphreic pressure.  https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0
+    - **Image Library:** Shows a collection of photographs from Voyager (1980's) and Galileo's (2000's) missions, along with options to display modals with a brief summary of each of the missions as well as links to their NASA's websites. https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981 & https://images-api.nasa.gov/search?q=galileo&year_start=2001&year_end=2002
+    - **Near Earth Objects:** Displays a list of Asteroids based on their closes approach date to Earth including their name, size and potential hazardoudness. Links to detailed information for each Asteroid are included for the user to click. https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-21&end_date=2021-02-23&api_key=DEMO_KEY
+
 
 ## User Stories
 
@@ -55,19 +53,28 @@ Our take on a space app showing the most interesting information available from 
 10. I should be able to logout
 11. ACCORDING TO OUR "LEADER", THE PASSWORD SHOULD NOT BE DISPLAYED, lol
 
+## Goals
+### Minimum Viable Product
++ Include 3 components, each of the consisting of an API request to NASA on different subjects ✔︎
++ The user should be able to navigate to each component with the option of going back to the home page✔︎
++ Include links to NASA's website for more information ✔︎
 
-## What's left?
+### Stretch Goal 1
++ Add more components with different subjects  ✔︎
++ Include modals to display additional information/links ✔︎
++ Add interesting information about the subject for the user to learn more  ✔︎
 
-- The user can add an infinite number of unique workouts so the My Workouts section will continue down forever
-- It would be better if the My Workouts were sorted by recently added instead of by workoutId
-- Should be able to edit or remove a workout
-- Be able to return back to the user profile page, after viewing the list of available workouts
+### Stretch Goal 2
++ The user will be able to query the data based on input dates.
+
+### Strecth Goal 3
++ Photo carousel.
+
 
 ## Challenges
-- Accessing the user from a page that did not have the user's profile id
-- Accesssing the join table directly
-- Including images rather than links without restructuring the code (routes??)
-- Coding with a collaborator
+- Obtaining data from different end-points and and requests.
+- Ensuring the dates had the appropriate format to be displayed consistently accross the components.
+
 
 ## Wireframe
 ![20210201_132114 (1)](https://user-images.githubusercontent.com/74585897/106974409-8180ca80-6709-11eb-9fd4-5d1922e19e2d.jpg)
