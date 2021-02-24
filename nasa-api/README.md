@@ -1,3 +1,95 @@
+# Project 3 - MISC Space App
+
+## Authors
+
+Ana Cecilia Maldonado, Thomas Gores, and Jordan Dyar
+
+## App link and Home Page
+[Home Page Link]()
+
+[Repo Link](https://github.com/Lavitzlegend/Project-3-Nasa-api/tree/master/nasa-api)
+
+Profile Page:
+![Screen Shot 2021-02-24 at 1 38 29 PM](https://user-images.githubusercontent.com/74753181/109056237-d29b3300-76a5-11eb-9d3c-92c941ceab58.png)
+
+
+## Preview
+
+Our take on a space app showing the most interesting information available from the NASA Api
+
+## Technology Used
+
+- Vanilla javascript, css, and html
+- React, React-router-dom, React-animations, Styled-components, surge
+- Embedded pictures and videos
+- Linked a font from fonts.googleapis
+
+## Theory
+
+
+   
+## Main Features
+
+- Landing page links to login or create an account and takes you to the respective EJS files
+- Using text and password inputs with req.body to pass them into their respective tables
+- Profile page utilizes a few for-loops to display all the workouts in the Workout table as well as all the workouts tied to the current userId in the JOIN table
+- BelongsToMany associations for both User and Workout classes
+- Migration and seeder files to ensure Tables are correct in the database and that there are some workouts in the the table to choose initially
+- YouTube embed links show as embedded videos in the workout show page
+- package.json file has the required node module dependencies
+- MVC architecture utilized for correct express and sequelize functionality
+- Foreign and other keys to link the userId and workoutId primary keys
+- Unique constraint added to JOIN table so the user cannot add the same workout twice
+
+## User Stories
+
+1. I want to see the homepage when I go to the URL
+2. I should be able to signup as a new user
+3. I should be able to login to my profile page as an existing user 
+4. I should see how long my account has been active 
+5. I want to see a list of all possible workouts 
+6. I should be able to add to the “My Workouts” section of my profile a new workout
+7. I want to have a link to any workouts added to My Workouts to see more info about that workout and/or edit the workout
+8. There should be a link to an index page of all workouts with a link to create a new workout
+9. I should be able to view the workout video without leaving the workout profile page
+10. I should be able to logout
+11. ACCORDING TO OUR "LEADER", THE PASSWORD SHOULD NOT BE DISPLAYED, lol
+
+
+## What's left?
+
+- The user can add an infinite number of unique workouts so the My Workouts section will continue down forever
+- It would be better if the My Workouts were sorted by recently added instead of by workoutId
+- Should be able to edit or remove a workout
+- Be able to return back to the user profile page, after viewing the list of available workouts
+
+## Challenges
+- Accessing the user from a page that did not have the user's profile id
+- Accesssing the join table directly
+- Including images rather than links without restructuring the code (routes??)
+- Coding with a collaborator
+
+## Wireframe
+![20210201_132114 (1)](https://user-images.githubusercontent.com/74585897/106974409-8180ca80-6709-11eb-9fd4-5d1922e19e2d.jpg)
+
+<img width="731" alt="Untitled 3" src="https://user-images.githubusercontent.com/74585897/106975533-965e5d80-670b-11eb-8bf8-0c080da75be2.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
