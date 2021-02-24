@@ -41,7 +41,7 @@ ul {
   padding-left: 0;
 }
 
-.button {
+.button, .backToTop {
   background-color: #333333;
   border: 2px solid #ebebeb;
   border-radius: 5px;
@@ -306,4 +306,10 @@ ul {
   padding: 0.5rem;
   text-align: justify;
   text-indent: 1rem;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
 }

@@ -58,8 +58,8 @@ class ImageAndVideoLib extends Component {
                             </div>
                      ))}
                     </div>
-
                 </div>
+                <a className="backToTop" href="#top">Back to top</a>
             </div>
         )
     }
