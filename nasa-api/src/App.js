@@ -59,7 +59,7 @@ class App extends Component {
         )} />
 
         <Route path="/imageandvideolib" render={() => (
-          <ImageAndVideoLib />
+          <ImageAndVideoLib formatDate={this.changeFormatDate}/>
         )} />
 
         <Route path="/neo" render={() => (

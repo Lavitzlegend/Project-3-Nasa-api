@@ -16,7 +16,7 @@ class MarsRoverPhotos extends Component {
     
     componentDidMount = async () => {
         const apiTest = await axios.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=eIMGP8aHIJwOWGztzhMAeZpVyHKseN8jMSKD6Px6");
-        
+        console.log(apiTest.data.latest_photos)
         this.setState ({
             roverPhotos: apiTest.data.latest_photos,
             dataLoaded: true
