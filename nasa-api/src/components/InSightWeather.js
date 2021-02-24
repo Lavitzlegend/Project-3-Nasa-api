@@ -69,6 +69,9 @@ class InSightWeather extends Component {
             <div className="marsWeather">
                 <h1 className="compHeader">Mars Weather</h1>
                 <div className="weather">
+                <div>
+                    {this.state.show ? <Modal modalState={this.state.show}/> : <p></p>}
+                </div>
                     <div className="iframe">
                         <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='680' height='527'  scrolling='no' frameBorder='0'></iframe>
                     </div>
@@ -81,13 +84,10 @@ class InSightWeather extends Component {
                         <h2 className="compSubHeader">Sol: {this.state.apiDataLoaded && renderSolKey2}</h2>
                         <h3 className="compSubHeader">Earth Date: {this.state.apiDataLoaded && this.props.formatDate(Day2NumsArray)}</h3>
                         <h4>Average Pressure (Pa): {this.state.apiDataLoaded && renderWeatherKey2.PRE.av}</h4>
+                        <div className="modalShow">
+                            <button className="modalButton" onClick={() => this.showModal()}> What does this mean? </button>
+                        </div>
                     </div>
-                </div>
-                <div className="temp">
-                    <button onClick={() => this.showModal()}> ShowModal </button>
-                    {this.state.show ?
-                    <Modal modalState={this.state.show}/>
-                    : <p></p>}
                 </div>
             </div>
         )
