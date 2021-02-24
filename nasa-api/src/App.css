@@ -238,22 +238,33 @@ ul {
   background-color: rgb(202, 46, 46);
 }
 
+.modalBody {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
 .modalBody li {
-  margin-left: 2rem;
+  margin-left: 10rem;
 }
 
 .modalBody ul {
   padding: 1rem 0 1rem 0;
 }
 
+.modalTitle {
+  text-align: center;
+  font-size: 18px;
+}
+
 .modalContent {
-  border: 2px solid orange;
+  border: 3px solid #ebebeb;
   background-color: #4e4e4e;
   text-indent: 1rem;
   padding: 1rem;
-  width: 40%;
-  opacity: 1;
   position: absolute;
-  top: 40%;
-  left: 30%
+  width: 95vw;
+  height: 85vh;
+  left: 0%
 }

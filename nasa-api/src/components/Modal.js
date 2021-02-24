@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import styled, { keyframes } from "styled-components";
 import {fadeIn} from "react-animations"
+import {fadeOut} from "react-animations"
 
 class Modal extends Component {
     constructor(props) {
@@ -9,19 +10,18 @@ class Modal extends Component {
     }
 
     render () {
-        const fadeAnimation = keyframes`${fadeIn}`;
+        const fadeAnimationIn = keyframes`${fadeIn}`;
+        const fadeAnimationOut = keyframes`${fadeOut}`;
 
         const MyModal = styled.div`
-        border: 1px solid blue;
         text-align: left;
-        background-color: #333333
-        animation: 1s ${fadeAnimation}
+        animation: 0.5s ${fadeAnimationIn}
         `
 
-        //console.log(this.props.modalState)
         return (
-            <MyModal className={`modal ${this.props.modalState ? `show`: ""}`}>
-                <div className="modalContent">
+            console.log(this.props),
+            <div className="modal">
+                <MyModal className="modalContent">
                     <div className="modalTitle">
                         <h2>Comparison between Mars and Earts's atmospheric pressure</h2>
                     </div>
@@ -33,9 +33,10 @@ class Modal extends Component {
                             <li>Mexico City: 81,360Pa</li>
                             <li>La Paz, Bolivia: 73,775Pa</li>
                         </ul>
+                        <button onClick={() => this.props.handleShow()}>Hide</button>
                     </div>
-                </div>
-            </MyModal>
+                </MyModal>
+            </div>
         )
     }
 }

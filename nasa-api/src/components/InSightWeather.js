@@ -46,6 +46,7 @@ class InSightWeather extends Component {
         this.setState({
             show: !this.state.show
         })
+        //console.log(this.state.show)
         return showModalSt
       }
 
@@ -69,8 +70,8 @@ class InSightWeather extends Component {
             <div className="marsWeather">
                 <h1 className="compHeader">Mars Weather</h1>
                 <div className="weather">
-                <div>
-                    {this.state.show ? <Modal modalState={this.state.show}/> : <p></p>}
+                <div className="modalDisplay">
+                    {this.state.show ? <Modal handleShow={this.showModal}/> : <p></p>}
                 </div>
                     <div className="iframe">
                         <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='680' height='527'  scrolling='no' frameBorder='0'></iframe>
