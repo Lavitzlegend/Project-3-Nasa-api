@@ -37,26 +37,30 @@ class ImageAndVideoLib extends Component {
     render() {
         return(
             <div className="imgvidlib">
-                <h1 className="compHeader">Images And Videos</h1>
-                {this.state.apiDataLoaded && this.state.imageVideo.map(image => (
-                    <div>
-                        <img className="voyPic" src={image.links[0].href}/>
-                        <p className="voyDesc"> {image.data[0].description}</p>
+                <h1 className="compHeader">Image And Video Libary</h1>
+                <div className="container3">
+                    <div className="imgvidlibMission">
+                    <h2 className="compSubHeader">Mission: Voyager</h2>
+                        {this.state.apiDataLoaded && this.state.imageVideo.map(image => (
+                            <div>
+                                <img className="voyPic" src={image.links[0].href}/>
+                                <p className="voyDesc"> {image.data[0].description}</p>
+                            </div>
+                        ))}
                     </div>
-                ))}
 
-            <div className="imgvidlibgal">
-                {this.state.apiDataLoaded && this.state.imageVideoGal.map(imageGal => (
-                    <div>
-                    <img className="galPic" src={imageGal.links[0].href}/>
-                    <p className="galDesc"> {imageGal.data[0].description}</p>
+                    <div className="imgvidlibMission">
+                    <h2 className="compSubHeader">Mission: Galileo</h2>
+                        {this.state.apiDataLoaded && this.state.imageVideoGal.map(imageGal => (
+                            <div>
+                                <img className="galPic" src={imageGal.links[0].href}/>
+                                <p className="galDesc"> {imageGal.data[0].description}</p>
+                            </div>
+                     ))}
                     </div>
-                ))}
 
+                </div>
             </div>
-            </div>
-
-
         )
     }
 }

@@ -87,7 +87,7 @@ ul {
   margin: 0;
 }
 
-.rover, .pod, .marsWeather, .neo, .section1 {
+.rover, .pod, .marsWeather, .neo, .section1, .imgvidlib {
   color: #ebebeb;
   background-color: #414141;
   padding-top: 0.5rem;
@@ -176,7 +176,7 @@ ul {
   margin-top: 10%
 }
 
-.container {
+.container, .container3 {
   display: grid;
   grid-template-columns: 40vw 40vw;
   margin-left: 10vw;
@@ -288,4 +288,22 @@ ul {
   justify-content: flex-end;
   padding: 0  2rem 0 0;
   background-color: #4e4e4e
+}
+
+.imgvidlibMission {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+}
+
+.voyPic, .galPic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.voyDesc, .galDesc {
+  padding: 0.5rem;
+  text-align: justify;
+  text-indent: 1rem;
 }
