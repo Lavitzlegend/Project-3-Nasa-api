@@ -3,7 +3,8 @@ Team:
 1. Ana Cecilia -
     * Styling Guru
     * Home Page creation/updates
-    * Mars Rover component API and modal
+    * Mars Rover component API
+    * Mars Weather modal
     * Image Library Archive modals
     * App.js changeFormatDate() functionality
     * App.css management
