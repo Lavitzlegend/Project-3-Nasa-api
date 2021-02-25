@@ -1,0 +1,24 @@
+Team:
+
+1. Ana Cecilia -
+    * Styling Guru
+    * Home Page creation/updates
+    * Mars Rover component API and modal
+    * Image Library Archive modals
+    * App.js changeFormatDate() functionality
+    * App.css management
+
+2. Tom -
+    * Picture of the Day API
+    * Image Library Archive APIs
+    * Voyager and Galileo data
+    * Project Diagram creation
+    * Planning directory management
+
+3. Jordan -
+    * GitHub management
+    * Initial React App structure
+    * Mars Weather API and embedded Image
+    * Near Earth Objects API
+    * Bug squasher
+    * App deployment
