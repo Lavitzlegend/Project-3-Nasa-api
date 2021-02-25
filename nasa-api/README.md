@@ -35,6 +35,15 @@ Our take on a space app showing the most interesting information available from 
     - **Image Library:** Shows a collection of photographs from Voyager (1980's) and Galileo's (2000's) missions, along with options to display modals with a brief summary of each of the missions as well as links to their NASA's websites. https://images-api.nasa.gov/search?q=voyager&year_start=1980&year_end=1981 & https://images-api.nasa.gov/search?q=galileo&year_start=2001&year_end=2002
     - **Near Earth Objects:** Displays a list of Asteroids based on their closes approach date to Earth including their name, size and potential hazardoudness. Links to detailed information for each Asteroid are included for the user to click. https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-02-21&end_date=2021-02-23&api_key=DEMO_KEY
 
+## User Stories
+
+1. I want to see the homepage when I go to the URL
+2. I want to see information of general interest about Mars on the Home page
+3. I want to have an option to see detailed information on the subjects presented
+4. I should have an option to go to any other page from the current page
+5. I want to be able to return to the Home page from any other page 
+6. I should be able to return to the top of the page easily
+7. I should be able to click on a link to access an explanation of subjects unfamiliar to most people
 
 ## Goals
 ### Minimum Viable Product
